@@ -26,7 +26,7 @@ const NotFound: React.FC = () => (
       <h1 className="text-3xl font-bold text-[#0e5872] mb-3">Page Not Found</h1>
       <p className="text-gray-500 mb-8">The page you're looking for doesn't exist or has been moved.</p>
       <a
-        href="/"
+        href="/Aravind_mano/"
         className="inline-flex items-center gap-2 bg-[#0e5872] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#de1c21] transition-colors"
       >
         Back to Home
@@ -99,7 +99,7 @@ const AppRoutes: React.FC = () => (
 );
 
 const App: React.FC = () => (
-  <BrowserRouter>
+  <BrowserRouter basename="/Aravind_mano">
     <AppRoutes />
   </BrowserRouter>
 );
