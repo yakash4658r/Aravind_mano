@@ -62,27 +62,10 @@ const AppRoutes: React.FC = () => (
       <Route path="/clinic" element={<Clinic />} />
       <Route path="/appointment" element={<Appointment />} />
 
-      {/* Services */}
-      <Route path="/services/laparoscopic-surgery" element={<InnerPage />} />
-      <Route path="/services/gi-cancer-surgery" element={<InnerPage />} />
-      <Route path="/services/hepatobiliary-pancreatic-surgery" element={<InnerPage />} />
-      <Route path="/services/colorectal-surgery" element={<InnerPage />} />
-      <Route path="/services/hernia-repair" element={<InnerPage />} />
-      <Route path="/services/gastroenterology-digestive-health" element={<InnerPage />} />
-
-      {/* Conditions */}
-      <Route path="/conditions/gallstones-biliary" element={<InnerPage />} />
-      <Route path="/conditions/gerd-acid-reflux" element={<InnerPage />} />
-      <Route path="/conditions/stomach-cancer" element={<InnerPage />} />
-      <Route path="/conditions/colorectal-cancer" element={<InnerPage />} />
-      <Route path="/conditions/pancreatic-disease" element={<InnerPage />} />
-      <Route path="/conditions/liver-tumours" element={<InnerPage />} />
-      <Route path="/conditions/esophageal-cancer" element={<InnerPage />} />
-
-      {/* Resources */}
-      <Route path="/resources/patient-stories" element={<InnerPage />} />
-      <Route path="/resources/gallery" element={<InnerPage />} />
-      <Route path="/resources/faq" element={<InnerPage />} />
+      {/* Dynamic routing for all Inner Pages */}
+      <Route path="/services/:id" element={<InnerPage />} />
+      <Route path="/conditions/:id" element={<InnerPage />} />
+      <Route path="/resources/:id" element={<InnerPage />} />
 
       {/* Legal */}
       <Route path="/contact" element={<Clinic />} />
