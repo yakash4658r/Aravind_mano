@@ -37,37 +37,32 @@ export const PLACEHOLDERS = {
   YT: "https://youtube.com/@draravindmano",
 };
 
-// ─── Navigation ──────────────────────────────────────────────
 export const NAV_ITEMS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   {
-    label: "Surgical Services",
+    label: "Cancers we Treat",
+    children: [
+      { label: "Liver Cancer", href: "/conditions/liver-cancer" },
+      { label: "Pancreatic Cancer", href: "/conditions/pancreatic-cancer" },
+      { label: "Oesophageal Cancer", href: "/conditions/oesophageal-cancer" },
+      { label: "Stomach Cancer", href: "/conditions/stomach-cancer" },
+      { label: "Intestinal Cancer", href: "/conditions/intestinal-cancer" },
+      { label: "Colon Cancer", href: "/conditions/colon-cancer" },
+    ],
+  },
+  {
+    label: "Expertise",
     children: [
       { label: "Laparoscopic Surgery", href: "/services/laparoscopic-surgery" },
+      { label: "Robotic Surgery", href: "/services/robotic-surgery" },
       { label: "GI Cancer Surgery", href: "/services/gi-cancer-surgery" },
-      { label: "Hepatobiliary & Pancreatic Surgery", href: "/services/hepatobiliary-pancreatic-surgery" },
-      { label: "Colorectal Surgery", href: "/services/colorectal-surgery" },
-      { label: "Hernia Repair", href: "/services/hernia-repair" },
-    ],
-  },
-  {
-    label: "Conditions",
-    children: [
-      { label: "Gallstones & Biliary", href: "/conditions/gallstones-biliary" },
-      { label: "GERD & Acid Reflux", href: "/conditions/gerd-acid-reflux" },
-      { label: "Stomach Cancer", href: "/conditions/stomach-cancer" },
-      { label: "Colorectal Cancer", href: "/conditions/colorectal-cancer" },
-      { label: "Pancreatic Disease", href: "/conditions/pancreatic-disease" },
-      { label: "Liver Tumours", href: "/conditions/liver-tumours" },
-    ],
-  },
-  {
-    label: "Resources",
-    children: [
-      { label: "Patient Stories", href: "/resources/patient-stories" },
-      { label: "Gallery", href: "/resources/gallery" },
-      { label: "FAQ", href: "/resources/faq" },
+      { label: "Liver Surgery", href: "/services/liver-surgery" },
+      { label: "Pancreas Surgery", href: "/services/pancreas-surgery" },
+      { label: "Pancreatitis", href: "/conditions/pancreatitis" },
+      { label: "Gallstones", href: "/conditions/gallstones" },
+      { label: "Hiatus Hernia", href: "/conditions/hiatus-hernia" },
+      { label: "Hernia Surgery", href: "/services/hernia-surgery" },
     ],
   },
   { label: "Contact Us", href: "/contact" },
@@ -124,20 +119,15 @@ export const STATS = [
 
 // ─── About Doctor ────────────────────────────────────────────
 export const ABOUT_DOCTOR = {
-  name: "Aravind Manoharan",
-  degree: PLACEHOLDERS.DOCTOR_DEGREE,
+  name: "Dr. Aravind Manoharan",
+  degree: "MBBS, MS (General Surgery), MCh (Surgical Gastroenterology & GI Surgery)",
   speciality: PLACEHOLDERS.DOCTOR_SPECIALITY_LINE,
-  tagline: "Precision Surgery, Compassionate Care",
+  tagline: "Dr. Aravind Manoharan",
   bio1:
-    "Aravind Manoharan is a Surgical Gastroenterologist, GI Oncosurgeon, and Gastroenterologist with advanced qualifications including MBBS, MS (General Surgery) and MCh (Surgical Gastroenterology & GI Surgery). He specializes in diagnosing and treating complex disorders of the digestive system — from chronic gastrointestinal conditions to advanced cancers.",
+    "Dr. Aravind Manoharan is a Surgical Gastroenterologist, GI Oncosurgeon, and Gastroenterologist with advanced super-specialty training in Surgical Gastroenterology and GI Surgery. He specializes in diagnosing and treating complex disorders of the entire digestive system — from chronic gastrointestinal conditions to advanced gastrointestinal cancers.",
   bio2:
-    "Dr. Aravind blends surgical precision, minimally invasive techniques, and personalized care to ensure the best outcomes for his patients.",
-  highlights: [
-    "Highly Qualified surgical gastroenterologist with MCh super-specialty training.",
-    "Minimally Invasive Focus for quicker recovery and better outcomes.",
-    "Compassionate & Patient-Centered Care throughout the treatment journey.",
-    "Experienced in Complex GI Cancers with multidisciplinary coordination.",
-  ],
+    "Currently practising at M R Hospital, Aminjikarai, Chennai, Dr. Aravind manages a wide spectrum of gastrointestinal conditions — from routine gallbladder and hernia surgeries to complex GI cancer resections and hepatobiliary procedures — with the same dedication and thoroughness.",
+  highlights: [],
   image: PLACEHOLDERS.DOCTOR_IMAGE,
 };
 
@@ -154,91 +144,103 @@ export const APPROACH_POINTS = [
 // ─── Expertise Cards ─────────────────────────────────────────
 export const EXPERTISE_CARDS = [
   {
-    icon: "🔭",
+    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80",
     title: "Laparoscopic Surgery",
-    desc: "Advanced keyhole techniques for gallbladder, hernia, and intestinal issues — ensuring faster recovery and minimal scarring.",
+    desc: "Advanced keyhole techniques for gallbladder, hernia, and intestinal issues.",
     href: "/services/laparoscopic-surgery",
-    color: "from-[#0e5872] to-[#1a7191]",
   },
   {
-    icon: "⚕️",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80",
+    title: "Robotic Surgery",
+    desc: "High precision, high end robotic surgical procedures for complex conditions.",
+    href: "/services/robotic-surgery",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80",
     title: "GI Cancer Surgery",
-    desc: "Specialized surgical oncology for stomach, colorectal, liver, and pancreatic cancers with curative intent.",
+    desc: "Specialized surgical oncology for stomach, colorectal, liver, and pancreatic cancers.",
     href: "/services/gi-cancer-surgery",
-    color: "from-[#de1c21] to-[#ff7680]",
   },
   {
-    icon: "🔬",
-    title: "Gastroenterology & Digestive Health",
-    desc: "Comprehensive diagnostic and therapeutic care for acid reflux, chronic pain, and inflammatory bowel conditions.",
-    href: "/services/gastroenterology-digestive-health",
-    color: "from-[#0e5872] to-[#1a7191]",
+    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80",
+    title: "Liver Surgery",
+    desc: "Advanced procedures including major hepatectomy for liver tumours and metastases.",
+    href: "/services/liver-surgery",
   },
   {
-    icon: "🩺",
-    title: "Hepatobiliary Surgery",
-    desc: "Complex liver resections, bile duct reconstructions, and specialized pancreatic procedures.",
-    href: "/services/hepatobiliary-pancreatic-surgery",
-    color: "from-[#0e5872] to-[#1a7191]",
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80",
+    title: "Pancreas Surgery",
+    desc: "Whipple procedure and complex resections for pancreatic diseases.",
+    href: "/services/pancreas-surgery",
   },
   {
-    icon: "🧱",
-    title: "Hernia Repair",
-    desc: "Expert tension-free mesh repair for inguinal, incisional, and umbilical hernias via laparoscopic approach.",
-    href: "/services/hernia-repair",
-    color: "from-[#de1c21] to-[#ff7680]",
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80",
+    title: "Pancreatitis",
+    desc: "Expert medical and surgical management for acute and chronic pancreatitis.",
+    href: "/conditions/pancreatitis",
   },
   {
-    icon: "🔄",
-    title: "Second Opinion",
-    desc: "Clear, evidence-based review of your GI diagnosis and treatment plan for peace of mind.",
-    href: "/contact",
-    color: "from-[#0e5872] to-[#1a7191]",
+    image: "https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80",
+    title: "Gallstones",
+    desc: "Gold-standard laparoscopic cholecystectomy for gallstone complications.",
+    href: "/conditions/gallstones",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80",
+    title: "Hiatus Hernia",
+    desc: "Laparoscopic repair and fundoplication for lasting relief from severe acid reflux.",
+    href: "/conditions/hiatus-hernia",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80",
+    title: "Hernia Surgery",
+    desc: "Tension-free mesh repair for inguinal, incisional, and umbilical hernias.",
+    href: "/services/hernia-surgery",
   },
 ];
 
 // ─── Cancers We Treat ────────────────────────────────────────
 export const CANCERS = [
   {
-    icon: "🍵",
-    title: "Stomach Cancer",
-    points: ["Subtotal Gastrectomy", "Total Gastrectomy", "D2 Lymph Node Dissection"],
-    href: "/conditions/stomach-cancer",
+    icon: "🫀",
+    title: "Liver Cancer",
+    points: ["Hepatocellular Carcinoma", "Liver Resection", "Metastasis Management"],
+    href: "/conditions/liver-cancer",
     color: "#0e5872",
-  },
-  {
-    icon: "⚕️",
-    title: "Colorectal Cancer",
-    points: ["Laparoscopic Colectomy", "Anterior Resection", "Sphincter Preservation"],
-    href: "/conditions/colorectal-cancer",
-    color: "#de1c21",
   },
   {
     icon: "🩺",
     title: "Pancreatic Cancer",
     points: ["Whipple Procedure", "Distal Pancreatectomy", "Pancreatic Cyst Management"],
-    href: "/conditions/pancreatic-disease",
-    color: "#0e5872",
-  },
-  {
-    icon: "🫁",
-    title: "Esophageal Cancer",
-    points: ["Oesophagectomy", "Minimally Invasive MIE", "Neo-adjuvant Coordination"],
-    href: "/conditions/esophageal-cancer",
+    href: "/conditions/pancreatic-cancer",
     color: "#de1c21",
   },
   {
-    icon: "🫀",
-    title: "Liver Cancer",
-    points: ["Liver Resection", "Metastasis Management", "Hepatectomy"],
-    href: "/conditions/liver-tumours",
+    icon: "🫁",
+    title: "Oesophageal Cancer",
+    points: ["Oesophagectomy", "Minimally Invasive MIE", "Neo-adjuvant Coordination"],
+    href: "/conditions/oesophageal-cancer",
+    color: "#0e5872",
+  },
+  {
+    icon: "🍵",
+    title: "Stomach Cancer",
+    points: ["Subtotal Gastrectomy", "Total Gastrectomy", "D2 Lymph Node Dissection"],
+    href: "/conditions/stomach-cancer",
+    color: "#de1c21",
+  },
+  {
+    icon: "⚕️",
+    title: "Intestinal Cancer",
+    points: ["Small Bowel Resection", "Laparoscopic Approach", "Curative Oncology"],
+    href: "/conditions/intestinal-cancer",
     color: "#0e5872",
   },
   {
     icon: "🔵",
-    title: "Biliary Cancers",
-    points: ["Gallbladder Cancer", "Bile Duct Resection", "Biliary Reconstruction"],
-    href: "/conditions/gallstones-biliary",
+    title: "Colon Cancer",
+    points: ["Laparoscopic Colectomy", "Anterior Resection", "Sphincter Preservation"],
+    href: "/conditions/colon-cancer",
     color: "#de1c21",
   },
 ];
@@ -293,28 +295,20 @@ export const MYTH_VIDEOS = [
 // ─── Testimonials ────────────────────────────────────────────
 export const TESTIMONIALS = [
   {
-    name: "Ritthika Anand",
-    location: "Chennai",
-    rating: 5,
-    text:
-      "Dr. Aravind Manoharan is an excellent laparoscopic gastro surgeon. He explained my condition clearly and treated me with great care and professionalism. The surgery and follow-up were smooth, and I recovered well. Highly recommended.",
-    tag: "Laparoscopic Surgery Patient",
+    name: "Radha devarajan",
+    text: "Thank you for your exceptional kindness and the positive impact you have made in my life. Your commitment to your patients is truly inspiring.",
   },
   {
-    name: "Praveen Pethuraj",
-    location: "Chennai",
-    rating: 5,
-    text:
-      "I had an emergency laparoscopic appendectomy, and Dr. Aravind handled it with great professionalism. The surgery was quick, the scars are minimal, and recovery was smooth. The doctor and team were very supportive and attentive.",
-    tag: "Emergency Appendectomy Patient",
+    name: "Prem Kumar",
+    text: "Thank you for your outstanding dedication and care. Your compassion and kindness have made a real difference in my recovery.",
   },
   {
-    name: "Gayathri",
-    location: "Chennai",
-    rating: 5,
-    text:
-      "Such a wonderful human being. To be a successful doctor, one needs to be a good human. He is one kind. Very polite and easily approachable. Any doubt, anytime, he is just a call away… Thank you Doctor 🙏",
-    tag: "Gastro Patient",
+    name: "Sheik Sithi",
+    text: "An exceptional oncologist with remarkable knowledge and dedication. The doctor explained every step of the treatment clearly, giving me confidence.",
+  },
+  {
+    name: "Abdul rahman khan",
+    text: "Fighting cancer is never easy, but having an oncologist who truly cares makes all the difference. Thank you for your guidance, compassion, and support.",
   },
 ];
 
@@ -781,6 +775,21 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
   },
 };
 
+// ─── Alias mappings for new Navigation Structure ───
+INNER_PAGES["conditions/liver-cancer"] = { ...INNER_PAGES["conditions/liver-tumours"], title: "Liver Cancer", breadcrumb: "Conditions > Liver Cancer" };
+INNER_PAGES["conditions/pancreatic-cancer"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreatic Cancer", breadcrumb: "Conditions > Pancreatic Cancer" };
+INNER_PAGES["conditions/oesophageal-cancer"] = { ...INNER_PAGES["conditions/esophageal-cancer"], title: "Oesophageal Cancer", breadcrumb: "Conditions > Oesophageal Cancer" };
+INNER_PAGES["conditions/intestinal-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Intestinal Cancer", breadcrumb: "Conditions > Intestinal Cancer" };
+INNER_PAGES["conditions/colon-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Colon Cancer", breadcrumb: "Conditions > Colon Cancer" };
+
+INNER_PAGES["services/robotic-surgery"] = { ...INNER_PAGES["services/laparoscopic-surgery"], title: "Robotic Surgery", breadcrumb: "Services > Robotic Surgery" };
+INNER_PAGES["services/liver-surgery"] = { ...INNER_PAGES["conditions/liver-tumours"], title: "Liver Surgery", breadcrumb: "Services > Liver Surgery" };
+INNER_PAGES["services/pancreas-surgery"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreas Surgery", breadcrumb: "Services > Pancreas Surgery" };
+INNER_PAGES["conditions/pancreatitis"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreatitis", breadcrumb: "Conditions > Pancreatitis" };
+INNER_PAGES["conditions/gallstones"] = { ...INNER_PAGES["conditions/gallstones-biliary"], title: "Gallstones", breadcrumb: "Conditions > Gallstones" };
+INNER_PAGES["conditions/hiatus-hernia"] = { ...INNER_PAGES["conditions/gerd-acid-reflux"], title: "Hiatus Hernia", breadcrumb: "Conditions > Hiatus Hernia" };
+INNER_PAGES["services/hernia-surgery"] = { ...INNER_PAGES["services/hernia-repair"], title: "Hernia Surgery", breadcrumb: "Services > Hernia Surgery" };
+
 // ─── Footer ──────────────────────────────────────────────────
 export const FOOTER_LINKS = {
   quickLinks: [
@@ -792,21 +801,18 @@ export const FOOTER_LINKS = {
   ],
   expertise: [
     { label: "Laparoscopic Surgery", href: "/services/laparoscopic-surgery" },
+    { label: "Robotic Surgery", href: "/services/robotic-surgery" },
     { label: "GI Cancer Surgery", href: "/services/gi-cancer-surgery" },
-    { label: "Hepatobiliary Surgery", href: "/services/hepatobiliary-pancreatic-surgery" },
-    { label: "Colorectal Surgery", href: "/services/colorectal-surgery" },
-    { label: "Hernia Repair", href: "/services/hernia-repair" },
+    { label: "Liver Surgery", href: "/services/liver-surgery" },
+    { label: "Pancreas Surgery", href: "/services/pancreas-surgery" },
+    { label: "Hernia Surgery", href: "/services/hernia-surgery" },
   ],
   services: [
-    { label: "Gastroenterology & Digestive Health", href: "/services/gastroenterology-digestive-health" },
-    { label: "Gallstones Treatment", href: "/conditions/gallstones-biliary" },
-    { label: "Acid Reflux Surgery", href: "/conditions/gerd-acid-reflux" },
-    { label: "Stomach Cancer Care", href: "/conditions/stomach-cancer" },
-    { label: "Colorectal Cancer Care", href: "/conditions/colorectal-cancer" },
-  ],
-  resources: [
-    { label: "Patient Stories", href: "/resources/patient-stories" },
-    { label: "Gallery", href: "/resources/gallery" },
-    { label: "FAQ", href: "/resources/faq" },
+    { label: "Liver Cancer", href: "/conditions/liver-cancer" },
+    { label: "Pancreatic Cancer", href: "/conditions/pancreatic-cancer" },
+    { label: "Oesophageal Cancer", href: "/conditions/oesophageal-cancer" },
+    { label: "Stomach Cancer", href: "/conditions/stomach-cancer" },
+    { label: "Intestinal Cancer", href: "/conditions/intestinal-cancer" },
+    { label: "Colon Cancer", href: "/conditions/colon-cancer" },
   ],
 };

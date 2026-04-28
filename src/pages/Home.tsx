@@ -45,9 +45,6 @@ const AboutSection: React.FC = () => (
 
         {/* Content */}
         <div>
-          <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-[#de1c21]/5 rounded-full mb-6 border border-[#de1c21]/10">
-            <p className="text-[#de1c21] text-[10px] font-black uppercase tracking-[0.3em]">Chief Surgeon Profile</p>
-          </div>
           <h2 className="text-4xl md:text-6xl font-black text-[#0e5872] mb-10 tracking-tighter leading-none">
             {ABOUT_DOCTOR.tagline}
           </h2>
@@ -55,20 +52,23 @@ const AboutSection: React.FC = () => (
             <p>{ABOUT_DOCTOR.bio1}</p>
             <p>{ABOUT_DOCTOR.bio2}</p>
           </div>
-          <div className="grid sm:grid-cols-2 gap-4 mt-10">
-            {ABOUT_DOCTOR.highlights.map((h, i) => (
-              <div key={i} className="flex items-center gap-4 bg-gray-50 rounded-2xl p-5 border border-gray-100 hover:border-[#0e5872]/20 transition-all">
-                <CheckCircle className="w-5 h-5 text-[#de1c21] shrink-0" />
-                <span className="text-sm font-black text-[#0e5872] tracking-tight">{h}</span>
-              </div>
-            ))}
+          
+          {/* Social Icons */}
+          <div className="flex items-center gap-4 mt-8">
+            <a href={PLACEHOLDERS.IG} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
+               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href={PLACEHOLDERS.FB} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
           </div>
+
           <div className="flex flex-wrap items-center gap-6 mt-12">
             <Link
               to="/about"
               className="bg-[#0e5872] text-white font-black px-10 py-5 rounded-2xl hover:bg-[#de1c21] transition-all shadow-xl hover:-translate-y-1 active:scale-95 flex items-center gap-3"
             >
-              Academic Profile <ArrowRight className="w-5 h-5" />
+              View full profile <ArrowRight className="w-5 h-5" />
             </Link>
             <a
               href={`tel:${PLACEHOLDERS.PHONE}`}
@@ -122,54 +122,42 @@ const ApproachSection: React.FC = () => (
 
 // ─── Section: Expertise Grid ─────────────────────────────────
 const ExpertiseSection: React.FC = () => (
-  <section className="py-32 bg-gray-50/50" aria-label="Clinical expertise">
+  <section className="py-24 bg-white" aria-label="Clinical expertise">
     <div className="max-w-7xl mx-auto px-4">
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8">
-        <div className="max-w-2xl">
-          <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-[#0e5872]/5 rounded-full mb-6">
-            <span className="w-2 h-2 rounded-full bg-[#de1c21] animate-pulse" />
-            <p className="text-[#0e5872] text-[10px] font-black uppercase tracking-[0.3em]">Surgical Mastery</p>
-          </div>
-          <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter leading-none">Clinical Pillars.</h2>
-        </div>
-        <Link 
-          to="/appointment" 
-          className="inline-flex items-center gap-4 text-[#0e5872] font-black border-b-4 border-[#de1c21] pb-2 hover:text-[#de1c21] transition-all group"
-        >
-          Book Consultation <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform" />
-        </Link>
+      <div className="mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0e5872] tracking-normal leading-none text-center">
+          Areas of Expertise
+        </h2>
+        <p className="text-gray-500 text-center mt-3 text-sm md:text-base font-medium">
+          As a surgical oncologist, I specialise in advanced cancer surgeries — from organ-preserving cancer procedures to high-precision robotic and laparoscopic techniques.
+        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {EXPERTISE_CARDS.map((card, i) => (
           <Link
             key={i}
             to={card.href}
-            className="group relative bg-white rounded-[3rem] p-12 border border-gray-100 shadow-[0_15px_50px_-20px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_60px_-15px_rgba(14,88,114,0.15)] transition-all duration-500 flex flex-col h-full"
+            className="group block bg-white border border-[#0e5872] shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col h-full"
             aria-label={card.title}
           >
-            <div className="absolute top-10 right-10 text-6xl font-black text-gray-50 group-hover:text-[#de1c21]/5 transition-colors">
-              0{i + 1}
-            </div>
-
-            <div className="relative z-10 flex-1">
-              <div className="w-20 h-20 rounded-3xl bg-gray-50 flex items-center justify-center text-4xl mb-12 shadow-inner group-hover:bg-[#0e5872] group-hover:text-white transition-all">
-                {card.icon}
+            <div className="p-4 flex-1 flex flex-col">
+              <div className="w-full aspect-[4/3] rounded overflow-hidden mb-4 bg-gray-100">
+                <img src={card.image} alt={card.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
-              <h3 className="font-black text-[#0e5872] text-3xl mb-6 group-hover:text-[#de1c21] transition-colors leading-tight tracking-tight">
+              
+              <h3 className="font-bold text-[#0e5872] text-[17px] underline underline-offset-4 mb-3 leading-tight decoration-1">
                 {card.title}
               </h3>
-              <p className="text-gray-500 leading-relaxed font-medium text-lg">
+              
+              <p className="text-gray-800 text-sm leading-relaxed mb-6 flex-1">
                 {card.desc}
               </p>
-            </div>
 
-            <div className="relative z-10 flex items-center justify-between border-t border-gray-100 pt-10 mt-auto">
-              <span className="text-[11px] font-black text-[#0e5872]/40 group-hover:text-[#0e5872] transition-colors uppercase tracking-[0.3em]">
-                View Protocol
-              </span>
-              <div className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center group-hover:bg-[#de1c21] group-hover:text-white transition-all">
-                <ArrowRight className="w-6 h-6" />
+              <div className="mt-auto">
+                <span className="font-bold text-[13px] text-[#0e5872] flex items-center gap-1 group-hover:text-[#de1c21] transition-colors">
+                  Read More <ArrowRight className="w-4 h-4 ml-1" />
+                </span>
               </div>
             </div>
           </Link>
@@ -183,59 +171,41 @@ const ExpertiseSection: React.FC = () => (
 const CancersSection: React.FC = () => (
   <section className="py-32 bg-white relative overflow-hidden" aria-label="Oncology specialty">
     <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-24">
-        <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-[#de1c21]/5 rounded-full mb-6 border border-[#de1c21]/10">
-          <p className="text-[#de1c21] text-[10px] font-black uppercase tracking-[0.3em]">Specialized Oncology</p>
-        </div>
-        <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter mb-8 leading-none">Oncology Interventions.</h2>
-        <p className="text-gray-400 max-w-3xl mx-auto text-xl font-medium leading-relaxed">
+      <div className="text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-[#0e5872] tracking-normal mb-4 uppercase">
+          EXPLORE CANCERS WE TREAT
+        </h2>
+        <p className="text-gray-500 max-w-3xl mx-auto text-sm md:text-base font-medium leading-relaxed">
           Integrated management for complex gastrointestinal malignancies using globally recognized surgical protocols.
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {CANCERS.map((cancer, i) => (
           <Link
             key={i}
             to={cancer.href}
-            className="group relative block"
+            className="group block bg-white rounded-lg p-8 border border-gray-300 shadow-sm hover:shadow-md hover:border-[#0e5872]/40 transition-all duration-300 h-full flex flex-col text-center"
             aria-label={cancer.title}
           >
-            <div className="bg-gray-50/50 rounded-[3.5rem] p-12 border border-transparent hover:border-[#0e5872]/10 hover:bg-white hover:shadow-[0_40px_80px_-20px_rgba(14,88,114,0.15)] transition-all duration-500 h-full flex flex-col">
-              <div className="flex items-center justify-between mb-10">
-                <div 
-                  className="w-20 h-20 rounded-3xl flex items-center justify-center text-5xl shadow-inner transition-transform group-hover:scale-110"
-                  style={{ backgroundColor: cancer.color + "15" }}
-                >
-                  {cancer.icon}
-                </div>
-                <div className="text-[10px] font-black text-[#0e5872]/20 group-hover:text-[#de1c21]/20 transition-colors uppercase tracking-[0.4em]">
-                  Curative care
-                </div>
+            <div className="flex justify-center mb-6">
+              <div 
+                className="w-16 h-16 rounded-full flex items-center justify-center text-5xl opacity-80 group-hover:scale-105 transition-transform"
+              >
+                {cancer.icon}
               </div>
+            </div>
 
-              <h3 className="font-black text-[#0e5872] text-3xl mb-8 group-hover:text-[#de1c21] transition-colors tracking-tight leading-tight">
-                {cancer.title}
-              </h3>
+            <h3 className="font-bold text-[#0e5872] text-[17px] underline underline-offset-4 decoration-1 mb-4">
+              {cancer.title}
+            </h3>
 
-              <div className="mb-10 flex-1">
-                <p className="text-[11px] font-black text-gray-300 uppercase tracking-widest mb-6 border-b border-gray-100 pb-3">Surgical Procedures</p>
-                <ul className="space-y-4">
-                  {cancer.points.map((pt, j) => (
-                    <li key={j} className="flex items-center gap-4 text-lg font-bold text-gray-500 group-hover:text-gray-900 transition-colors">
-                      <div className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cancer.color }} />
-                      {pt}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-auto pt-8 border-t border-gray-100/50 flex items-center justify-between">
-                <span className="text-[11px] font-black text-[#de1c21] uppercase tracking-[0.3em] group-hover:tracking-[0.4em] transition-all">
-                  Full Protocol
-                </span>
-                <ArrowRight className="w-6 h-6 text-gray-200 group-hover:text-[#de1c21] transition-colors" />
-              </div>
+            <div className="mt-auto flex-1 flex flex-col items-center justify-center">
+              <ul className="text-gray-800 text-[13px] leading-relaxed space-y-1.5 flex flex-col items-center">
+                {cancer.points.map((pt, j) => (
+                  <li key={j} className="text-center">{pt}</li>
+                ))}
+              </ul>
             </div>
           </Link>
         ))}

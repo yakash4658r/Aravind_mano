@@ -90,19 +90,9 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5">Services</h3>
+            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5">Cancers we Treat</h3>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.services.map((l) => (
-                <li key={l.href}>
-                  <Link to={l.href} className="text-white/60 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5 mt-8">Resources</h3>
-            <ul className="space-y-2.5">
-              {FOOTER_LINKS.resources.map((l) => (
                 <li key={l.href}>
                   <Link to={l.href} className="text-white/60 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
                     {l.label}

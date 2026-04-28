@@ -8,20 +8,32 @@ const useCountUp = (target: string, active: boolean) => {
     if (!active) return;
     const num = parseInt(target.replace(/\D/g, ""), 10);
     if (isNaN(num) || target.includes("/")) {
+      // For MCh, 24/7, etc.
       setCount(target);
       return;
     }
     const suffix = target.replace(/[\d,]/g, "");
-    const duration = 1800;
+    const duration = 2500; // Increased duration for a more visible dynamic effect
     const steps = 60;
     const increment = num / steps;
     let current = 0;
-    const timer = setInterval(() => {
-      current = Math.min(current + increment, num);
-      setCount(Math.floor(current).toLocaleString() + suffix);
-      if (current >= num) clearInterval(timer);
-    }, duration / steps);
-    return () => clearInterval(timer);
+    
+    // Add a slight delay before it starts counting
+    const delayTimer = setTimeout(() => {
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= num) {
+          setCount(num.toLocaleString() + suffix);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(current).toLocaleString() + suffix);
+        }
+      }, duration / steps);
+      
+      return () => clearInterval(timer);
+    }, 300);
+
+    return () => clearTimeout(delayTimer);
   }, [active, target]);
 
   return count;
@@ -46,7 +58,7 @@ const StatItem: React.FC<{ value: string; label: string; active: boolean; index:
       <span className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-none">
         {animated}
       </span>
-      <span className="text-[#de1c21] text-sm font-extrabold mt-2 uppercase tracking-wider">{label}</span>
+      <span className="text-white/90 text-sm font-extrabold mt-2 uppercase tracking-wider">{label}</span>
     </div>
   );
 };
