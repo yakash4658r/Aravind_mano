@@ -127,7 +127,13 @@ export const ABOUT_DOCTOR = {
     "Dr. Aravind Manoharan is a Surgical Gastroenterologist, GI Oncosurgeon, and Gastroenterologist with advanced super-specialty training in Surgical Gastroenterology and GI Surgery. He specializes in diagnosing and treating complex disorders of the entire digestive system — from chronic gastrointestinal conditions to advanced gastrointestinal cancers.",
   bio2:
     "Currently practising at M R Hospital, Aminjikarai, Chennai, Dr. Aravind manages a wide spectrum of gastrointestinal conditions — from routine gallbladder and hernia surgeries to complex GI cancer resections and hepatobiliary procedures — with the same dedication and thoroughness.",
-  highlights: [],
+  highlights: [
+    "MBBS — Completed in 2010",
+    "MS (General Surgery) — Specialized in 2016",
+    "MCh (Surgical Gastroenterology & GI Surgery) — Super-specialty Excellence 2021",
+    "Advanced Fellowship in Minimally Invasive & Laparoscopic Surgery",
+    "Expert in Complex GI Cancer and Onco-surgery Procedures",
+  ],
   image: PLACEHOLDERS.DOCTOR_IMAGE,
 };
 

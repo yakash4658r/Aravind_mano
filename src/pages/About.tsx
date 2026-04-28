@@ -7,13 +7,11 @@ import { ABOUT_DOCTOR, STATS, FAQ_ITEMS, PLACEHOLDERS } from "../data/siteData";
 import { CheckCircle, Award, BookOpen, Users, ArrowRight } from "lucide-react";
 
 const TIMELINE = [
-  { year: "2006", event: "MBBS — Madras Medical College, Chennai" },
-  { year: "2011", event: "MS General Surgery — Stanley Medical College, Chennai" },
-  { year: "2015", event: "MCh Surgical Gastroenterology & GI Surgery — Super-specialty Excellence" },
-  { year: "2016", event: "Advanced Fellowship in Minimally Invasive & Laparoscopic Surgery" },
-  { year: "2017", event: "Senior Consultant — specialized in GI Onco-surgery" },
-  { year: "2019", event: "Pioneer in Advanced Laparoscopic Colorectal Procedures in Chennai" },
-  { year: "2022", event: "Recognized as a leading Hepatobiliary specialist in South India" },
+  { year: "2010", event: "MBBS" },
+  { year: "2016", event: "MS General Surgery" },
+  { year: "2021", event: "MCh Surgical Gastroenterology & GI Surgery" },
+  { year: "2022", event: "Advanced Fellowship in Minimally Invasive & Laparoscopic Surgery" },
+  { year: "2023", event: "Senior Consultant — specialized in GI Onco-surgery" },
   { year: "2024", event: "Successfully completed over 5,000+ complex GI surgical procedures" },
 ];
 
