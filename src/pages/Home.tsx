@@ -83,42 +83,6 @@ const AboutSection: React.FC = () => (
   </section>
 );
 
-// ─── Section: Approach ───────────────────────────────────────
-const ApproachSection: React.FC = () => (
-  <section className="py-16 bg-white relative overflow-hidden" aria-label="Clinical approach">
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-24">
-        <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-[#0e5872]/5 rounded-full mb-6">
-          <p className="text-[#0e5872] text-[10px] font-black uppercase tracking-[0.3em]">Our Philosophy</p>
-        </div>
-        <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter mb-8 leading-none">The Patient Experience.</h2>
-        <p className="text-gray-400 max-w-2xl mx-auto text-xl font-medium leading-relaxed">
-          Combining cutting-edge surgical technology with profound clinical empathy for superior digestive health outcomes.
-        </p>
-      </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {APPROACH_POINTS.map((point, i) => (
-          <div
-            key={i}
-            className="group relative bg-white rounded-[3rem] p-12 border border-gray-100 shadow-[0_15px_50px_-20px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-15px_rgba(14,88,114,0.12)] transition-all duration-500 overflow-hidden"
-          >
-            <div className="absolute top-0 left-0 w-2 h-full bg-[#de1c21] scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-center" />
-            <div className="w-20 h-20 rounded-3xl bg-gray-50 flex items-center justify-center text-5xl mb-10 shadow-inner group-hover:scale-110 group-hover:rotate-6 transition-transform">
-              {point.icon}
-            </div>
-            <h3 className="font-black text-[#0e5872] text-2xl mb-4 transition-colors group-hover:text-[#de1c21]">
-              {point.title}
-            </h3>
-            <p className="text-gray-500 leading-relaxed font-medium">
-              {point.desc}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 // ─── Section: Expertise Grid ─────────────────────────────────
 const ExpertiseSection: React.FC = () => (
@@ -273,7 +237,6 @@ export const Home: React.FC = () => {
       <StatsRibbon />
       <AboutSection />
       <ExpertiseSection />
-      <ApproachSection />
       <CancersSection />
       <ServicesBand />
       <TestimonialSlider />

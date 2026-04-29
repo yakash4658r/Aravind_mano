@@ -4,7 +4,7 @@ import { PLACEHOLDERS } from "../data/siteData";
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="bg-[#1f2b43] text-white relative overflow-hidden" aria-label="Call to action">
+    <section className="bg-[#0e5872] text-white relative overflow-hidden" aria-label="Call to action">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
           
