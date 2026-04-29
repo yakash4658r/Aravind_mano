@@ -18,7 +18,7 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 
 // ─── Section: About Doctor ───────────────────────────────────
 const AboutSection: React.FC = () => (
-  <section className="py-24 bg-white overflow-hidden" aria-label="About the specialist">
+  <section className="py-12 bg-white overflow-hidden" aria-label="About the specialist">
     <div className="max-w-7xl mx-auto px-4">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         {/* Image Grid */}
@@ -85,7 +85,7 @@ const AboutSection: React.FC = () => (
 
 // ─── Section: Approach ───────────────────────────────────────
 const ApproachSection: React.FC = () => (
-  <section className="py-32 bg-white relative overflow-hidden" aria-label="Clinical approach">
+  <section className="py-16 bg-white relative overflow-hidden" aria-label="Clinical approach">
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-24">
         <div className="inline-flex items-center gap-3 px-4 py-1.5 bg-[#0e5872]/5 rounded-full mb-6">
@@ -122,7 +122,7 @@ const ApproachSection: React.FC = () => (
 
 // ─── Section: Expertise Grid ─────────────────────────────────
 const ExpertiseSection: React.FC = () => (
-  <section className="py-24 bg-white" aria-label="Clinical expertise">
+  <section className="py-12 bg-white" aria-label="Clinical expertise">
     <div className="max-w-7xl mx-auto px-4">
       <div className="mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0e5872] tracking-normal leading-none text-center">
@@ -169,7 +169,7 @@ const ExpertiseSection: React.FC = () => (
 
 // ─── Section: Cancers Grid ───────────────────────────────────
 const CancersSection: React.FC = () => (
-  <section className="py-32 bg-white relative overflow-hidden" aria-label="Oncology specialty">
+  <section className="py-16 bg-white relative overflow-hidden" aria-label="Oncology specialty">
     <div className="max-w-7xl mx-auto px-4">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-4xl font-bold text-[#0e5872] tracking-normal mb-4 uppercase">
@@ -216,7 +216,7 @@ const CancersSection: React.FC = () => (
 
 // ─── Section: Services Ribbon ────────────────────────────────
 const ServicesBand: React.FC = () => (
-  <section className="py-32 bg-[#0e5872] relative overflow-hidden" aria-label="Ribbon services">
+  <section className="py-16 bg-[#0e5872] relative overflow-hidden" aria-label="Ribbon services">
     <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
     <div className="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-[#de1c21]/15 rounded-full blur-[100px] pointer-events-none" />
     <div className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
@@ -279,11 +279,11 @@ export const Home: React.FC = () => {
       <TestimonialSlider />
 
       {/* FAQ section */}
-      <section className="py-32 bg-white relative">
+      <section className="py-16 bg-white relative">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-24">
             <p className="text-[#de1c21] text-sm font-black uppercase tracking-[0.4em] mb-4">Common Protocols</p>
-            <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter">Frequently Asked.</h2>
+            <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter">FAQ.</h2>
             <div className="h-2 w-24 bg-[#de1c21] mx-auto mt-10 rounded-full" />
           </div>
           <FAQAccordion items={FAQ_ITEMS} />

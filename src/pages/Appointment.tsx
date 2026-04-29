@@ -89,7 +89,7 @@ export const Appointment: React.FC = () => {
     return (
       <main>
         <PageHero title="Appointment Requested" breadcrumb="Appointment" />
-        <section className="py-24 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-lg mx-auto px-4 text-center">
             <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-8">
               <CheckCircle className="w-12 h-12 text-green-500" />
@@ -143,7 +143,7 @@ export const Appointment: React.FC = () => {
     <main>
       <PageHero title="Make An Appointment" breadcrumb="Appointment" subtitle="Book a consultation with our specialist — we'll confirm within 24 hours." />
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Form */}

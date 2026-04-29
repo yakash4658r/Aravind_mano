@@ -9,7 +9,7 @@ export const CTASection: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24">
           
           {/* Text Content */}
-          <div className="flex-1 py-16 md:py-20 z-10">
+          <div className="flex-1 py-10 md:py-12 z-10">
             <h2 className="text-3xl md:text-[38px] font-bold text-white leading-tight mb-6 tracking-tight">
               Take the First Step Toward Advanced Gastro & Cancer Care
             </h2>

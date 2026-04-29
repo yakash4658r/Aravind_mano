@@ -30,7 +30,7 @@ export const InnerPage: React.FC = () => {
         breadcrumb={data.breadcrumb || "Services"} 
       />
 
-      <section className="py-20 relative z-10">
+      <section className="py-12 relative z-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
             
@@ -189,10 +189,10 @@ export const InnerPage: React.FC = () => {
 
       {/* FAQ Section */}
       {hasFaq && (
-        <section className="py-20 bg-white border-t border-gray-100">
+        <section className="py-12 bg-white border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#1f2b43] tracking-tight mb-4">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-[#1f2b43] tracking-tight mb-4">FAQ</h2>
               <div className="h-1 w-16 bg-[#0e5872] mx-auto rounded" />
             </div>
             <FAQAccordion items={data.faq} />

@@ -33,7 +33,7 @@ export const About: React.FC = () => {
       />
 
       {/* Main profile */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-14 items-start">
             {/* Sticky image */}
@@ -126,7 +126,7 @@ export const About: React.FC = () => {
       </section>
 
       {/* Career timeline */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e5872] section-title centered">Career Milestones</h2>
@@ -156,7 +156,7 @@ export const About: React.FC = () => {
       </section>
 
       {/* Associations */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-[#0e5872] mb-8 flex items-center justify-center gap-2">
             <Users className="w-6 h-6 text-[#de1c21]" />
@@ -177,7 +177,7 @@ export const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold text-[#0e5872] section-title centered">Common Questions</h2>

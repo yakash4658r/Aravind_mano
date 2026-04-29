@@ -31,7 +31,7 @@ export const Clinic: React.FC = () => {
       />
 
       {/* Mission / Vision */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -83,7 +83,7 @@ export const Clinic: React.FC = () => {
       </section>
 
       {/* Facilities */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-[#0e5872] section-title centered mb-3">Our Facilities</h2>
@@ -103,7 +103,7 @@ export const Clinic: React.FC = () => {
       </section>
 
       {/* Services quick links */}
-      <section className="py-20 bg-[#0e5872]">
+      <section className="py-12 bg-[#0e5872]">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white section-title centered text-white">Services We Offer</h2>
@@ -121,7 +121,7 @@ export const Clinic: React.FC = () => {
       </section>
 
       {/* Info strip */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
