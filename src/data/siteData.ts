@@ -3,6 +3,13 @@
 // Replace all {{PLACEHOLDER}} values with your actual content
 // ============================================================
 
+const resolveAssetPath = (path: string) => {
+  if (path.startsWith('http')) return path;
+  const base = import.meta.env.BASE_URL || "/";
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${base}${cleanPath}`;
+};
+
 export const PLACEHOLDERS = {
   // Doctor
   DOCTOR_NAME: "Dr. Aravind Manoharan",
@@ -12,8 +19,9 @@ export const PLACEHOLDERS = {
   // Clinic / Brand
   CLINIC_NAME: "DrAravindMano",
   CITY: "Chennai",
-  LOGO_URL: "/images/Logo.svg",
-  DOCTOR_IMAGE: "/images/Aravind Manoharan.webp",
+  LOGO_URL: resolveAssetPath("/images/Logo.svg"),
+  DOCTOR_IMAGE: resolveAssetPath("/images/Aravind Manoharan.webp"),
+  CLINIC_IMAGE: resolveAssetPath("/images/clinic.jpg"),
 
   // Theme colors
   PRIMARY_COLOR: "#0e5872",
@@ -79,7 +87,7 @@ export const HERO_SLIDES = [
     ctaHref: PLACEHOLDERS.APPOINTMENT_LINK,
     secondaryLabel: "Our Services",
     secondaryHref: "/services/laparoscopic-surgery",
-    image: "/images/hero-doctor.jpg",
+    image: resolveAssetPath("/images/hero-doctor.jpg"),
     imageAlt: "Dr. Aravind Manoharan in consultation",
   },
   {
@@ -91,7 +99,7 @@ export const HERO_SLIDES = [
     ctaHref: "/services/gi-cancer-surgery",
     secondaryLabel: "Book Consultation",
     secondaryHref: PLACEHOLDERS.APPOINTMENT_LINK,
-    image: "/images/hero-robotic.jpg",
+    image: resolveAssetPath("/images/hero-robotic.jpg"),
     imageAlt: "Advanced GI surgery preparation",
   },
   {
@@ -103,7 +111,7 @@ export const HERO_SLIDES = [
     ctaHref: "/about",
     secondaryLabel: "View Patient Stories",
     secondaryHref: "/resources/patient-stories",
-    image: "/images/hero-care.jpg",
+    image: resolveAssetPath("/images/hero-care.jpg"),
     imageAlt: "Dr. Aravind explaining treatment to a patient",
   },
 ];

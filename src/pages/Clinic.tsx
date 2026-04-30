@@ -62,7 +62,7 @@ export const Clinic: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] border-b-8 border-[#0e5872]">
                 <img
-                  src="/images/clinic.jpg"
+                  src={PLACEHOLDERS.CLINIC_IMAGE} 
                   alt={PLACEHOLDERS.CLINIC_NAME}
                   className="w-full h-full object-cover"
                   onError={(e) => { (e.target as HTMLImageElement).src = "https://placehold.co/800x600/0e5872/ffffff?text=Our+Clinic"; }}
