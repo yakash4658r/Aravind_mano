@@ -131,3 +131,12 @@ body {
   100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
 }
 .whatsapp-btn { animation: pulse-ring 2.5s ease-in-out infinite; }
+ 
+/* ── Hide Scrollbar Utility ── */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

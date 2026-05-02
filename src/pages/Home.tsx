@@ -138,18 +138,18 @@ const CancersSection: React.FC = () => (
 
     <div className="max-w-7xl mx-auto px-4 relative z-10">
       <div className="text-center mb-24">
-        <p className="text-[#de1c21] text-xs font-black uppercase tracking-[0.4em] mb-4">Oncology Focus</p>
+
         <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-tight uppercase">
           EXPLORE CANCERS WE TREAT
         </h2>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="flex gap-6 overflow-x-auto pb-12 hide-scrollbar snap-x snap-mandatory">
         {CANCERS.map((cancer, i) => (
           <Link
             key={i}
             to={cancer.href}
-            className="group relative block h-full"
+            className="group relative flex-shrink-0 w-[320px] md:w-[400px] h-[450px] snap-center"
             aria-label={cancer.title}
           >
             <div className="h-full bg-white/[0.04] backdrop-blur-3xl border border-white/10 rounded-[3.5rem] p-10 hover:bg-white/[0.1] hover:border-white/40 transition-all duration-500 hover:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] flex flex-col">
