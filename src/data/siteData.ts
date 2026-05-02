@@ -70,6 +70,7 @@ export const NAV_ITEMS = [
       { label: "Pancreatitis", href: "/conditions/pancreatitis" },
       { label: "Gallstones", href: "/conditions/gallstones" },
       { label: "Hiatus Hernia", href: "/conditions/hiatus-hernia" },
+      { label: "Bariatric Surgery", href: "/services/bariatric-surgery" },
       { label: "Hernia Surgery", href: "/services/hernia-surgery" },
     ],
   },
@@ -373,62 +374,71 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
     title: "Laparoscopic Surgery",
     breadcrumb: "Services > Laparoscopic Surgery",
     intro:
-      "Laparoscopic (minimally invasive) surgery uses a laparoscope — a thin tube with a high-intensity light and a high-resolution camera at the front — to look at the abdominal organs. This advanced technique allows for major surgeries to be performed through tiny incisions.",
+      "Laparoscopic surgery is a technique where the surgeon inserts a thin, flexible tube called a laparoscope — fitted with a light and high-definition camera — through a small incision in the abdomen. The camera transmits magnified images to a monitor, allowing the surgeon to operate with exceptional precision using small specialised instruments. This approach is often preferred because it is less traumatic to the body, carries lower infection risk, and promotes a significantly faster recovery.",
     highlights: [
-      "Minimally invasive approach with small incisions",
-      "Less post-operative pain and discomfort",
-      "Faster recovery and shorter hospital stays",
-      "Minimal scarring and better cosmetic results",
-      "Reduced risk of wound infections",
-      "Precision-guided camera visualization",
+      "Laparoscopic Cholecystectomy (Gallbladder Removal)",
+      "Hernia Repair (Inguinal, Incisional, Umbilical, Hiatal)",
+      "Laparoscopic Appendectomy",
+      "Laparoscopic Colorectal Surgery",
+      "Laparoscopic GI Cancer Surgery",
+      "Biliary & Pancreatic Laparoscopic Procedures",
+      "MCh Super-Specialty Trained Specialist",
+      "High-Volume Laparoscopic Surgeon",
     ],
     symptoms: [
-      "Gallstones and gallbladder inflammation",
-      "Acute or chronic appendicitis",
-      "Inguinal, umbilical, or incisional hernia",
-      "Gastroesophageal reflux disease (GERD)",
-      "Bowel resection for benign or malignant issues",
+      "Diagnosed with gallstones or gallbladder disease",
+      "Inguinal, hiatal, incisional, or umbilical hernias",
+      "Bowel resection for colon cancer, IBD, or diverticular disease",
+      "Early to mid-stage GI cancers suitable for resection",
+      "Surgical treatment for appendicitis, GERD, or biliary disease",
     ],
     treatmentSteps: [
-      { step: "Initial Consultation", desc: "Detailed history and physical examination to assess suitability for laparoscopy." },
-      { step: "Diagnostic Workup", desc: "Ultrasound, CT, or MRI imaging to plan the surgical approach." },
-      { step: "Anesthesia", desc: "Procedure performed under general anesthesia for patient comfort." },
-      { step: "Trocar Insertion", desc: "Small ports placed to introduce the laparoscope and instruments." },
-      { step: "Surgical Procedure", desc: "Organ removal or repair performed under high-definition visualization." },
-      { step: "Rapid Recovery", desc: "Early mobilization and discharge, often within 24–48 hours." },
+      { step: "Personalised Surgical Planning", desc: "Thorough pre-operative evaluation and individually tailored surgical plan." },
+      { step: "Clinical Evaluation", desc: "Assessment of hernia type or GI condition suitability for laparoscopy." },
+      { step: "Precision Surgery", desc: "Minimally invasive approach prioritizing safety and oncological outcomes." },
+      { step: "Rapid Recovery", desc: "Post-operative care focused on fast mobilization and minimal pain." },
     ],
-    faq: FAQ_ITEMS.slice(0, 3),
+    faq: [
+      { q: "How long does laparoscopic surgery take?", a: "Most laparoscopic procedures take between 30 minutes and 2 hours depending on the complexity of the surgery and the condition being treated." },
+      { q: "How soon can I return home after laparoscopic surgery?", a: "Many patients are discharged the same day or within 24–48 hours. More complex procedures may require a short hospital stay of 2–4 days." },
+      { q: "Will I have visible scars?", a: "Laparoscopic surgery leaves only 3–4 small puncture marks (typically 5–12mm each), which fade significantly over time and are much less noticeable than open surgery scars." },
+      { q: "Is laparoscopic surgery safe?", a: "Yes — laparoscopic surgery is well-established, safe, and performed routinely worldwide. Dr. Aravind Manoharan has extensive experience in laparoscopic techniques for GI conditions." },
+      { q: "Does laparoscopic surgery cost more than open surgery?", a: "While the upfront procedural cost may be similar or slightly higher, laparoscopic surgery often results in lower total costs due to shorter hospital stays and faster recovery." },
+    ],
   },
   "services/gi-cancer-surgery": {
     title: "GI Cancer Surgery",
     breadcrumb: "Services > GI Cancer Surgery",
     intro:
-      "GI Cancer Surgery involves the surgical treatment of cancers affecting the digestive system. Dr. Aravind Manoharan focuses on curative resections, ensuring early detection and clear margins (R0 resection) for the best possible survival outcomes.",
+      "GI cancer surgery involves the precise removal of cancerous tumours from the digestive tract — including the stomach, liver, pancreas, colon, rectum, and oesophagus. Surgery is often the primary and most effective treatment for gastrointestinal cancers, offering the highest chance of cure when detected at an operable stage.",
     highlights: [
-      "Curative intent for stomach, colon, and rectal cancers",
-      "Advanced D2 lymph node dissection for gastric cancer",
-      "Sphincter-preserving surgery for rectal cancer",
-      "Multidisciplinary approach with oncologists",
-      "Early detection programs for GI malignancies",
-      "Minimal access surgery for selected cancer cases",
+      "Stomach (Gastric) Cancer Surgery (D2 lymph node dissection)",
+      "Colon & Rectal Cancer Surgery (Laparoscopic & Robotic)",
+      "Liver Cancer Surgery (Hepatectomy)",
+      "Pancreatic Cancer Surgery (Whipple Procedure)",
+      "Oesophageal Cancer Surgery (Oesophagectomy)",
+      "MCh-Qualified GI Oncosurgeon Specialist",
+      "Multidisciplinary Comprehensive Care",
     ],
     symptoms: [
-      "Unexplained weight loss and loss of appetite",
-      "Persistent abdominal pain or bloating",
-      "Change in bowel habits (constipation or diarrhea)",
-      "Rectal bleeding or black tarry stools",
-      "Difficulty swallowing (dysphagia)",
-      "Painless jaundice (yellowing of skin/eyes)",
+      "Newly diagnosed with gastrointestinal or digestive system cancer",
+      "Seeking a second surgical opinion for cancer treatment",
+      "Abnormal findings on endoscopy, CT scan, MRI, or PET scan",
+      "Unexplained weight loss, bleeding, jaundice, or persistent symptoms",
+      "Completed chemotherapy and requiring surgical resection",
     ],
     treatmentSteps: [
-      { step: "Comprehensive Staging", desc: "Endoscopy, biopsy, and high-resolution imaging (CT/PET-CT)." },
-      { step: "Neo-adjuvant Therapy", desc: "Coordination of chemo/radiation before surgery if required." },
-      { step: "Surgical Planning", desc: "Customized resection strategy to ensure complete tumor removal." },
-      { step: "Refined Resection", desc: "Precise surgery with adequate lymph node clearance." },
-      { step: "Pathological Analysis", desc: "Expert review of resected tissue for staging and margins." },
-      { step: "Adjuvant Planning", desc: "Long-term follow-up and coordination of post-op therapy." },
+      { step: "Oncological Precision", desc: "Achieving complete tumour removal with clear margins while preserving healthy tissue." },
+      { step: "Multidisciplinary Planning", desc: "Coordinated care with medical and radiation oncologists." },
+      { step: "Minimally Invasive Options", desc: "Laparoscopic or robotic-assisted cancer surgery where oncologically appropriate." },
+      { step: "Long-term Surveillance", desc: "Rigorous follow-up protocol to monitor for recurrence and ensure recovery." },
     ],
-    faq: FAQ_ITEMS.slice(3, 5),
+    faq: [
+      { q: "Is surgery always necessary for GI cancer?", a: "Surgery is often the primary treatment for resectable GI cancers. For some cancers, chemotherapy or radiation may be given before surgery to shrink the tumour. Dr. Aravind will discuss all options with you." },
+      { q: "What is the recovery like after GI cancer surgery?", a: "Recovery varies by procedure. Most patients stay in hospital for 5–10 days. Full recovery typically takes 4–8 weeks depending on the type of surgery." },
+      { q: "Can GI cancer be cured by surgery?", a: "When detected and operated upon at an early stage, many GI cancers can be cured by surgery. Even in advanced cases, surgery combined with other treatments can significantly improve survival and quality of life." },
+      { q: "Will I need chemotherapy after GI cancer surgery?", a: "Depending on the cancer type, stage, and pathology findings, adjuvant (post-operative) chemotherapy may be recommended. Dr. Aravind will coordinate with your oncologist for a complete care plan." },
+    ],
   },
   "services/hepatobiliary-pancreatic-surgery": {
     title: "Hepatobiliary & Pancreatic Surgery",
@@ -796,13 +806,305 @@ INNER_PAGES["conditions/oesophageal-cancer"] = { ...INNER_PAGES["conditions/esop
 INNER_PAGES["conditions/intestinal-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Intestinal Cancer", breadcrumb: "Conditions > Intestinal Cancer" };
 INNER_PAGES["conditions/colon-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Colon Cancer", breadcrumb: "Conditions > Colon Cancer" };
 
-INNER_PAGES["services/robotic-surgery"] = { ...INNER_PAGES["services/laparoscopic-surgery"], title: "Robotic Surgery", breadcrumb: "Services > Robotic Surgery" };
-INNER_PAGES["services/liver-surgery"] = { ...INNER_PAGES["conditions/liver-tumours"], title: "Liver Surgery", breadcrumb: "Services > Liver Surgery" };
-INNER_PAGES["services/pancreas-surgery"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreas Surgery", breadcrumb: "Services > Pancreas Surgery" };
-INNER_PAGES["conditions/pancreatitis"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreatitis", breadcrumb: "Conditions > Pancreatitis" };
-INNER_PAGES["conditions/gallstones"] = { ...INNER_PAGES["conditions/gallstones-biliary"], title: "Gallstones", breadcrumb: "Conditions > Gallstones" };
-INNER_PAGES["conditions/hiatus-hernia"] = { ...INNER_PAGES["conditions/gerd-acid-reflux"], title: "Hiatus Hernia", breadcrumb: "Conditions > Hiatus Hernia" };
-INNER_PAGES["services/hernia-surgery"] = { ...INNER_PAGES["services/hernia-repair"], title: "Hernia Surgery", breadcrumb: "Services > Hernia Surgery" };
+INNER_PAGES["services/robotic-surgery"] = {
+  title: "Robotic Surgery",
+  breadcrumb: "Services > Robotic Surgery",
+  intro:
+    "In robotic surgery, the surgeon is fully in control — seated at a console with a magnified 3D view of the surgical field. The robotic arms replicate the surgeon's hand movements with greater precision and without tremor, which is particularly valuable in confined anatomical spaces.",
+  highlights: [
+    "Robotic Colorectal Surgery (Low anterior resection)",
+    "Robotic Hernia Repair (Complex and recurrent hernias)",
+    "Robotic Gastric Surgery (Stomach cancer resections)",
+    "Robotic Hepatobiliary Surgery (Liver and biliary procedures)",
+    "Robotic Rectal Cancer Surgery (Total mesorectal excision)",
+    "Advanced Training in Robotic GI Techniques",
+    "Selective & Evidence-Based Approach",
+  ],
+  symptoms: [
+    "Requiring complex colorectal or rectal cancer surgery",
+    "Individuals with recurrent or complex hernias",
+    "Undergoing gastrectomy or bowel resection for cancer",
+    "Anatomical complexity where enhanced visualisation improves safety",
+    "Seeking the most advanced minimally invasive surgical option",
+  ],
+  treatmentSteps: [
+    { step: "Enhanced Visualization", desc: "Magnified 3D view allowing for precise dissection around critical structures." },
+    { step: "Tremor Filtration", desc: "Robotic arms translate movements with absolute stability and accuracy." },
+    { step: "Selective Recommendation", desc: "Robotic approach used only when it offers a genuine clinical advantage." },
+    { step: "Integrated Cancer Care", desc: "Coordinated planning with oncology and radiology teams." },
+  ],
+  faq: [
+    { q: "Is the robot performing the surgery?", a: "No. The robot is a precision tool. Dr. Aravind Manoharan is fully in control at all times — the robotic system simply translates his movements with greater accuracy." },
+    { q: "Is robotic surgery safer than laparoscopic surgery?", a: "For certain complex procedures, robotic surgery offers enhanced precision and reduced complications. For routine cases, laparoscopic surgery remains equally safe and effective." },
+    { q: "How long is the recovery after robotic surgery?", a: "Recovery is similar to laparoscopic surgery — most patients are discharged within 2–5 days and return to normal activities within 2–4 weeks." },
+    { q: "Is robotic surgery available in Chennai?", a: "Yes — Dr. Aravind Manoharan offers robotic-assisted surgery at M R Hospital, Aminjikarai, Chennai." },
+  ],
+};
+
+INNER_PAGES["services/bariatric-surgery"] = {
+  title: "Bariatric Surgery",
+  breadcrumb: "Services > Bariatric Surgery",
+  intro:
+    "Bariatric surgery is the most effective and long-lasting treatment for severe obesity and obesity-related conditions including Type 2 diabetes, hypertension, and sleep apnoea. It creates lasting anatomical changes that support long-term weight loss and metabolic health.",
+  highlights: [
+    "Laparoscopic Sleeve Gastrectomy",
+    "Roux-en-Y Gastric Bypass",
+    "Mini Gastric Bypass (MGB)",
+    "Metabolic Remission of Type 2 Diabetes",
+    "Comprehensive Pre-operative Assessment",
+    "Long-term Post-operative Support",
+  ],
+  symptoms: [
+    "BMI ≥ 37.5 (Asian criteria) with or without comorbidities",
+    "BMI ≥ 32.5 with Type 2 diabetes or hypertension",
+    "Failed multiple attempts at sustained weight loss",
+    "Significant impact of obesity on joints or mental health",
+  ],
+  treatmentSteps: [
+    { step: "Multidisciplinary Evaluation", desc: "Cardiac, nutritional, and psychological assessment before surgery." },
+    { step: "Laparoscopic Procedure", desc: "Minimally invasive bypass or sleeve gastrectomy." },
+    { step: "Metabolic Monitoring", desc: "Close follow-up of diabetes and hypertension resolution." },
+    { step: "Lifelong Support", desc: "Nutritional counselling and follow-up for sustained weight loss." },
+  ],
+  faq: [
+    { q: "Is bariatric surgery permanent?", a: "Bariatric surgery creates lasting anatomical changes that support long-term weight loss. However, maintaining a healthy lifestyle is essential for sustained results." },
+    { q: "Can bariatric surgery cure diabetes?", a: "Yes — bariatric surgery, particularly gastric bypass, often achieves complete remission of Type 2 diabetes even before significant weight loss occurs." },
+  ],
+};
+
+INNER_PAGES["services/liver-surgery"] = {
+  title: "Liver Surgery",
+  breadcrumb: "Services > Liver Surgery",
+  intro:
+    "Liver surgery (hepatic surgery) involves the partial or complete removal of diseased liver tissue. The liver has a remarkable capacity to regenerate, making surgery possible even when a significant portion needs to be removed. Dr. Aravind performs both open and laparoscopic liver resections for tumours, cysts, and injuries.",
+  highlights: [
+    "Segmental Hepatectomy (Maximum healthy liver preservation)",
+    "Right or Left Hepatectomy (Lobar liver removal)",
+    "Laparoscopic Liver Resection (Minimally invasive approach)",
+    "Liver Cyst Surgery (Deroofing or resection)",
+    "Liver Abscess Drainage (Surgical or image-guided)",
+    "Hepatobiliary Specialist Expertise",
+    "Oncological Adequacy & Safety Focus",
+  ],
+  symptoms: [
+    "Diagnosed with primary hepatocellular carcinoma (HCC)",
+    "Resectable liver metastases from colorectal or other cancers",
+    "Symptomatic or growing liver cysts or benign tumours",
+    "Liver abscesses not responding to medical management",
+    "Bile duct disease affecting the liver tissue",
+  ],
+  treatmentSteps: [
+    { step: "Functional Assessment", desc: "Evaluating liver function and volume to ensure safety after resection." },
+    { step: "Surgical Resection", desc: "Removing diseased tissue with ultrasound-guided margins." },
+    { step: "Regeneration Support", desc: "Post-operative care focusing on liver function recovery." },
+    { step: "Multidisciplinary Care", desc: "Coordinated planning with oncology and radiology teams." },
+  ],
+  faq: [
+    { q: "Can the liver regenerate after surgery?", a: "Yes. The liver has an exceptional regenerative capacity. Even after removal of up to 70% of liver tissue, the remaining liver typically regenerates to normal size within weeks to months." },
+    { q: "How long does liver surgery take?", a: "Liver surgery typically takes 2–6 hours depending on the extent of resection. More complex procedures take longer." },
+    { q: "What is the recovery time after liver surgery?", a: "Most patients stay in hospital for 5–7 days and require 4–8 weeks for full recovery. Laparoscopic liver surgery generally allows faster recovery." },
+    { q: "Is liver surgery risky?", a: "All surgery carries some risk. Liver surgery requires specialist expertise. Dr. Aravind carefully selects patients and plans each procedure to minimise risk and achieve the safest outcome." },
+  ],
+};
+
+INNER_PAGES["services/pancreas-surgery"] = {
+  title: "Pancreas Surgery",
+  breadcrumb: "Services > Pancreas Surgery",
+  intro:
+    "Pancreatic surgery involves complex operations on the pancreas to treat tumours, cysts, and inflammatory disease. Due to the proximity to major blood vessels, it requires a highly skilled specialist. Dr. Aravind is trained in all major procedures, including the Whipple operation and distal pancreatectomy.",
+  highlights: [
+    "Whipple Procedure (Pancreaticoduodenectomy)",
+    "Distal Pancreatectomy (Spleen-preserving when possible)",
+    "Central Pancreatectomy (Parenchyma-preserving)",
+    "Pancreatic Cyst Surgery (IPMN and mucinous cysts)",
+    "Chronic Pancreatitis Drainage (Frey or Puestow procedure)",
+    "HPB Super-Specialty Qualification",
+    "Meticulous Pre-operative Optimization",
+  ],
+  symptoms: [
+    "Diagnosed with pancreatic cancer or periampullary tumours",
+    "Pancreatic cysts showing high-risk imaging features",
+    "Pain-dominant chronic pancreatitis failing medical treatment",
+    "Functional pancreatic tumours (Insulinoma)",
+    "Unexplained jaundice and dilated bile ducts",
+  ],
+  treatmentSteps: [
+    { step: "Triphasic CT Staging", desc: "Detailed imaging to assess resectability and vascular involvement." },
+    { step: "Whipple/Resection", desc: "Complex surgical removal of diseased pancreatic segments." },
+    { step: "Nutritional Support", desc: "Enzyme replacement and specialized diet planning post-op." },
+    { step: "Long-term Surveillance", desc: "Continuous monitoring of pancreatic function and cancer markers." },
+  ],
+  faq: [
+    { q: "What is the Whipple procedure?", a: "The Whipple procedure (pancreaticoduodenectomy) is a major surgery to remove the head of the pancreas, duodenum, part of the bile duct, and gallbladder — performed for cancers of the pancreatic head." },
+    { q: "How long is recovery after pancreatic surgery?", a: "Hospital stay is typically 7–10 days. Full recovery takes 6–12 weeks. Patients often require dietary modifications and enzyme supplementation." },
+    { q: "Will I develop diabetes after pancreatic surgery?", a: "Depending on the extent of pancreatic removal, some patients may develop or worsen diabetes after surgery. This is closely monitored post-operatively." },
+    { q: "Can pancreatic cancer be cured by surgery?", a: "Surgery offers the only chance of cure for pancreatic cancer. Early-stage, resectable pancreatic cancer treated with surgery followed by chemotherapy has the best survival outcomes." },
+  ],
+};
+
+INNER_PAGES["conditions/pancreatitis"] = {
+  title: "Pancreatitis",
+  breadcrumb: "Conditions > Pancreatitis",
+  intro:
+    "Pancreatitis is inflammation of the pancreas that ranges from mild acute episodes to debilitating chronic disease. Dr. Aravind provides comprehensive management, including medical bowel rest, endoscopic drainage, and specialized surgical procedures for chronic pancreatitis.",
+  highlights: [
+    "Acute Pancreatitis Medical Management",
+    "Surgical Drainage (Frey or Puestow procedure)",
+    "Distal Pancreatectomy for tail disease",
+    "Endoscopic drainage of duct obstructions",
+    "Nutritional & Enzyme replacement support",
+    "Minimally invasive approach prioritised",
+    "Compassionate Patient-Centred Care",
+  ],
+  symptoms: [
+    "Severe upper abdominal pain radiating to the back",
+    "Persistent nausea and vomiting",
+    "Fever and elevated heart rate (acute episodes)",
+    "Chronic pain and unexplained weight loss",
+    "Fatty or oily stools and sudden-onset diabetes",
+  ],
+  treatmentSteps: [
+    { step: "Emergency Stabilization", desc: "Medical management with bowel rest, fluids, and pain control." },
+    { step: "Aetiology Identification", desc: "Determining cause (Gallstones/Alcohol) to prevent recurrence." },
+    { step: "Surgical Intervention", desc: "Drainage or resection for chronic complications and pain." },
+    { step: "Functional Restoration", desc: "Long-term nutritional and enzyme support for pancreatic health." },
+  ],
+  faq: [
+    { q: "Can pancreatitis be cured?", a: "Acute pancreatitis usually resolves with medical treatment. Chronic pancreatitis can be managed but not fully cured — surgery can significantly reduce pain and improve quality of life." },
+    { q: "What causes pancreatitis?", a: "The most common causes are gallstones (blocking the duct) and heavy alcohol use. Other causes include high triglycerides and certain medications." },
+  ],
+};
+
+INNER_PAGES["conditions/colon-cancer"] = {
+  title: "Colon Cancer",
+  breadcrumb: "Conditions > Colon Cancer",
+  intro:
+    "Colon cancer (colorectal cancer) is highly treatable when detected early. Dr. Aravind offering laparoscopic right and left hemicolectomy with meticulous lymph node dissection for accurate staging and cure. We prioritize sphincter preservation and faster recovery.",
+  highlights: [
+    "Laparoscopic Right and Left Hemicolectomy",
+    "Sigmoid Colectomy for left-sided tumours",
+    "Complete Mesocolic Excision (CME)",
+    "Sphincter-preserving rectal surgery",
+    "Adjuvant Chemotherapy Coordination",
+    "MCh Super-Specialty Qualification",
+    "Minimally Invasive (Laparoscopic) First Approach",
+  ],
+  symptoms: [
+    "Change in bowel habits (diarrhoea/constipation)",
+    "Blood in stool or rectal bleeding",
+    "Unexplained weight loss and fatigue",
+    "Persistent abdominal pain, cramping, or bloating",
+    "Feeling that the bowel doesn't empty completely",
+  ],
+  treatmentSteps: [
+    { step: "Diagnostic Colonoscopy", desc: "Visual verification and biopsy for histopathological staging." },
+    { step: "Oncological Resection", desc: "Precise removal of the cancerous segment and lymph nodes." },
+    { step: "Functional Preservation", desc: "Techniques to preserve bowel control and quality of life." },
+    { step: "Multidisciplinary Follow-up", desc: "Coordinated care with oncologists for long-term survival." },
+  ],
+  faq: [
+    { q: "Is colon cancer curable?", a: "Yes — when detected at an early stage (Stage I or II), colon cancer has excellent cure rates with surgery alone. Even Stage III disease has good long-term outcomes with combined therapy." },
+    { q: "What is colonoscopy and do I need one?", a: "Colonoscopy is a diagnostic procedure to visualise the colon and detect polyps. It is recommended for anyone over 45 or with rectal bleeding." },
+  ],
+};
+
+INNER_PAGES["conditions/gallstones"] = {
+  title: "Gallstones",
+  breadcrumb: "Conditions > Gallstones",
+  intro:
+    "Gallstones are common causes of intense abdominal pain and digestive complications. Dr. Aravind performs laparoscopic cholecystectomy — the gold-standard treatment — through tiny incisions, allowing most patients to go home within 24 hours.",
+  highlights: [
+    "Laparoscopic Cholecystectomy (Keyhole removal)",
+    "ERCP coordination for bile duct stones",
+    "Single-incision Laparoscopic Surgery (SILS)",
+    "Emergency management of cholecystitis",
+    "Treatment for Gallstone Pancreatitis",
+    "Rapid Return to Normal Activities",
+    "Precision Minimally Invasive Techniques",
+  ],
+  symptoms: [
+    "Right upper abdominal pain after fatty meals",
+    "Intense nausea and vomiting",
+    "Bloating and persistent indigestion",
+    "Jaundice if stones block the bile duct",
+    "Fever and severe pain (indicating infection)",
+  ],
+  treatmentSteps: [
+    { step: "Radiological Confirmation", desc: "High-resolution ultrasound to verify stones and wall inflammation." },
+    { step: "Laparoscopic Removal", desc: "Minimally invasive cholecystectomy with minimal scarring." },
+    { step: "Bile Duct Clearance", desc: "Ensuring no stones remain in the common bile duct." },
+    { step: "Post-op Diet Plan", desc: "Gradual return to normal dietary habits with early mobilization." },
+  ],
+  faq: [
+    { q: "Do I need surgery for gallstones?", a: "Symptomatic gallstones — causing pain, nausea, or complications — are best treated with surgery. Asymptomatic gallstones may sometimes be monitored." },
+    { q: "What happens if gallstones are not treated?", a: "Untreated symptomatic gallstones can lead to cholecystitis, cholangitis (bile duct infection), or gallstone pancreatitis." },
+  ],
+};
+
+INNER_PAGES["conditions/hiatus-hernia"] = {
+  title: "Hiatus Hernia",
+  breadcrumb: "Conditions > Hiatus Hernia",
+  intro:
+    "A hiatus hernia occurs when part of the stomach pushes into the chest cavity, causing chronic acid reflux (GERD). Dr. Aravind offering laparoscopic repair — including Nissen fundoplication — providing lasting relief with minimal recovery time.",
+  highlights: [
+    "Laparoscopic Hiatus Hernia Repair",
+    "Nissen or Toupet Fundoplication",
+    "Closing the diaphragmatic defect",
+    "Relief from chronic GERD and heartburn",
+    "Prevention of Barrett's Esophagus",
+    "Minimally Invasive approach prioritised",
+    "Personalised Surgical Planning",
+  ],
+  symptoms: [
+    "Chronic heartburn and acid reflux (GERD)",
+    "Regurgitation of acid or food",
+    "Difficulty swallowing or food getting stuck",
+    "Chest pain or discomfort after eating",
+    "Chronic cough, hoarseness, or throat clearing",
+  ],
+  treatmentSteps: [
+    { step: "Functional Evaluation", desc: "Endoscopy and pH monitoring to assess the severity of reflux." },
+    { step: "Laparoscopic Repair", desc: "Reducing the hernia and closing the muscle gap in the diaphragm." },
+    { step: "Valve Strengthening", desc: "Fundoplication to create a strong anti-reflux barrier." },
+    { step: "Dietary Guidance", desc: "Long-term lifestyle and post-op diet support for sustained relief." },
+  ],
+  faq: [
+    { q: "Do all hiatus hernias need surgery?", a: "Small hernias causing mild symptoms are managed with medications. Surgery is recommended for large hernias or when medical treatment fails to control GERD." },
+    { q: "What is fundoplication?", a: "Fundoplication is a surgical procedure where part of the stomach is wrapped around the lower oesophagus to prevent acid reflux." },
+  ],
+};
+
+INNER_PAGES["services/hernia-surgery"] = {
+  title: "Hernia Surgery",
+  breadcrumb: "Services > Hernia Surgery",
+  intro:
+    "A hernia occurs when an organ pushes through a weakness in the muscle wall. Dr. Aravind offers expert laparoscopic and open repair for all hernia types using tension-free mesh techniques that minimise recurrence risk and allow fast recovery.",
+  highlights: [
+    "Laparoscopic TEP or TAPP Inguinal Repair",
+    "Laparoscopic Incisional Hernia Repair",
+    "Umbilical and Femoral Hernia repair",
+    "Tension-free Mesh Reinforcement",
+    "Bilateral hernias treated simultaneously",
+    "MCh Super-Specialty Expertise",
+    "Rapid Mobilization Protocol",
+  ],
+  symptoms: [
+    "A visible bulge in the groin or abdomen",
+    "Discomfort or pain when bending or lifting",
+    "A feeling of heaviness or dragging in the groin",
+    "Sudden severe pain and inability to push bulge back (Emergency)",
+  ],
+  treatmentSteps: [
+    { step: "Clinical Assessment", desc: "Detailed evaluation of the hernia size and risk of strangulation." },
+    { step: "Mesh Reinforcement", desc: "Laparoscopic placement of a high-quality mesh to prevent recurrence." },
+    { step: "Tension-Free Technique", desc: "Minimizing post-op pain by avoiding tight muscle sutures." },
+    { step: "Fast-Track Recovery", desc: "Discharge within 24–48 hours with minimal activity restrictions." },
+  ],
+  faq: [
+    { q: "Do all hernias need surgery?", a: "All symptomatic hernias and those at risk of strangulation require surgical repair to prevent life-threatening complications." },
+    { q: "Can a hernia come back after surgery?", a: "With modern mesh-based laparoscopic repair, recurrence rates are very low (1–3%). Maintaining a healthy weight further reduces risk." },
+  ],
+};
 
 // ─── Footer ──────────────────────────────────────────────────
 export const FOOTER_LINKS = {
@@ -819,6 +1121,7 @@ export const FOOTER_LINKS = {
     { label: "GI Cancer Surgery", href: "/services/gi-cancer-surgery" },
     { label: "Liver Surgery", href: "/services/liver-surgery" },
     { label: "Pancreas Surgery", href: "/services/pancreas-surgery" },
+    { label: "Bariatric Surgery", href: "/services/bariatric-surgery" },
     { label: "Hernia Surgery", href: "/services/hernia-surgery" },
   ],
   services: [
