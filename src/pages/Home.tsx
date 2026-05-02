@@ -45,7 +45,7 @@ const AboutSection: React.FC = () => (
 
         {/* Content */}
         <div>
-          <h2 className="text-4xl md:text-6xl font-black text-[#0e5872] mb-10 tracking-tighter leading-none">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-[#0e5872] mb-10 tracking-tighter leading-tight lg:whitespace-nowrap">
             {ABOUT_DOCTOR.tagline}
           </h2>
           <div className="space-y-6 text-gray-500 text-lg leading-relaxed font-medium">
@@ -189,7 +189,7 @@ const ServicesBand: React.FC = () => (
       <div className="text-center mb-24">
         <p className="text-[#de1c21] text-xs font-black uppercase tracking-[0.4em] mb-4">Precision Mastery</p>
         <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-tight">
-          Super-Specialty Clinical Focus.
+          EXPLORE CANCERS WE TREAT
         </h2>
       </div>
 
@@ -244,9 +244,8 @@ export const Home: React.FC = () => {
       {/* FAQ section */}
       <section className="py-16 bg-white relative">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="text-center mb-24">
-            <p className="text-[#de1c21] text-sm font-black uppercase tracking-[0.4em] mb-4">Common Protocols</p>
-            <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter">FAQ.</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter">FAQ’s</h2>
             <div className="h-2 w-24 bg-[#de1c21] mx-auto mt-10 rounded-full" />
           </div>
           <FAQAccordion items={FAQ_ITEMS} />

@@ -16,9 +16,7 @@ const YoutubeIcon = () => (
   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.95C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
 );
 
-export const Footer: React.FC = () => {
-  return (
-    <footer className="bg-[#0e5872] text-white" role="contentinfo">
+    <footer className="bg-white text-gray-900 border-t border-gray-100" role="contentinfo">
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -28,26 +26,26 @@ export const Footer: React.FC = () => {
               <img 
                 src={PLACEHOLDERS.LOGO_URL} 
                 alt={`${PLACEHOLDERS.CLINIC_NAME} Logo`} 
-                className="h-12 w-auto object-contain"
+                className="h-14 w-auto object-contain"
               />
               <div>
-                <div className="font-bold text-lg leading-tight">{PLACEHOLDERS.CLINIC_NAME}</div>
-                <div className="text-[#de1c21] text-[10px] uppercase tracking-wider font-bold">Gastroenterology & GI Surgery</div>
+                <div className="font-bold text-lg leading-tight text-[#0e5872]">{PLACEHOLDERS.CLINIC_NAME}</div>
+                <div className="text-gray-900 text-[10px] uppercase tracking-wider font-bold">Gastroenterology & GI Surgery</div>
               </div>
             </div>
-            <p className="text-white/60 text-sm leading-relaxed mb-6">
+            <p className="text-gray-500 text-sm leading-relaxed mb-6">
               Expert surgical care for gastrointestinal conditions and GI cancers. Combining advanced laparoscopic techniques with personalized treatment for optimal patient outcomes.
             </p>
             <div className="space-y-3 text-sm">
-              <a href={`tel:${PLACEHOLDERS.PHONE}`} className="flex items-center gap-3 text-white/60 hover:text-[#de1c21] transition-colors">
+              <a href={`tel:${PLACEHOLDERS.PHONE}`} className="flex items-center gap-3 text-gray-600 hover:text-[#de1c21] transition-colors">
                 <Phone className="w-4 h-4 text-[#de1c21] flex-shrink-0" />
                 {PLACEHOLDERS.PHONE}
               </a>
-              <a href={`mailto:${PLACEHOLDERS.EMAIL}`} className="flex items-center gap-3 text-white/60 hover:text-[#de1c21] transition-colors">
+              <a href={`mailto:${PLACEHOLDERS.EMAIL}`} className="flex items-center gap-3 text-gray-600 hover:text-[#de1c21] transition-colors">
                 <Mail className="w-4 h-4 text-[#de1c21] flex-shrink-0" />
                 {PLACEHOLDERS.EMAIL}
               </a>
-              <p className="flex items-start gap-3 text-white/60">
+              <p className="flex items-start gap-3 text-gray-600">
                 <MapPin className="w-4 h-4 text-[#de1c21] flex-shrink-0 mt-0.5" />
                 {PLACEHOLDERS.ADDRESS}
               </p>
@@ -66,21 +64,21 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:bg-[#de1c21] hover:text-white transition-colors"
+                  className="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-500 hover:bg-[#de1c21] hover:text-white transition-colors"
                 >
                   <Icon />
                 </a>
               ))}
             </div>
           </div>
-
+          
           {/* Quick Links */}
           <div>
-            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5">Quick Links</h3>
+            <h3 className="font-bold text-sm uppercase tracking-widest text-black mb-5">Quick Links</h3>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.quickLinks.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} className="text-white/60 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
+                  <Link to={l.href} className="text-gray-600 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
                     {l.label}
                   </Link>
                 </li>
@@ -90,11 +88,11 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5">Cancers we Treat</h3>
+            <h3 className="font-bold text-sm uppercase tracking-widest text-black mb-5">Cancers we Treat</h3>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.services.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} className="text-white/60 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
+                  <Link to={l.href} className="text-gray-600 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
                     {l.label}
                   </Link>
                 </li>
@@ -104,11 +102,11 @@ export const Footer: React.FC = () => {
 
           {/* Expertise */}
           <div>
-            <h3 className="font-bold text-sm uppercase tracking-widest text-[#de1c21] mb-5">Expertise</h3>
+            <h3 className="font-bold text-sm uppercase tracking-widest text-black mb-5">Expertise</h3>
             <ul className="space-y-2.5">
               {FOOTER_LINKS.expertise.map((l) => (
                 <li key={l.href}>
-                  <Link to={l.href} className="text-white/60 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
+                  <Link to={l.href} className="text-gray-600 text-sm hover:text-[#de1c21] hover:pl-1 transition-all">
                     {l.label}
                   </Link>
                 </li>
@@ -119,13 +117,13 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40">
+      <div className="border-t border-gray-100 bg-gray-50/50">
+        <div className="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
           <span>© {new Date().getFullYear()}, {PLACEHOLDERS.CLINIC_NAME}. All Rights Reserved.</span>
-          <div className="flex gap-5">
-            <Link to="/privacy" className="hover:text-[#de1c21] transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-[#de1c21] transition-colors">Terms of Use</Link>
-            <Link to="/disclaimer" className="hover:text-[#de1c21] transition-colors">Medical Disclaimer</Link>
+          <div className="flex gap-6">
+            <Link to="/privacy" className="hover:text-[#0e5872] transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-[#0e5872] transition-colors">Terms of Use</Link>
+            <Link to="/disclaimer" className="hover:text-[#0e5872] transition-colors">Medical Disclaimer</Link>
           </div>
         </div>
       </div>

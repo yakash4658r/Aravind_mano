@@ -95,7 +95,7 @@ export const Header: React.FC = () => {
               <img 
                 src={PLACEHOLDERS.LOGO_URL} 
                 alt={`${PLACEHOLDERS.CLINIC_NAME} Logo`} 
-                className="h-12 md:h-16 w-auto object-contain transition-all"
+                className="h-14 md:h-20 w-auto object-contain transition-all"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=Logo';
                 }}
