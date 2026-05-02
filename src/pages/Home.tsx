@@ -41,11 +41,11 @@ const AboutSection: React.FC = () => (
                 (e.target as HTMLImageElement).src = PLACEHOLDERS.DOCTOR_IMAGE;
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0e5872]/60 to-transparent" />
-            <div className="absolute bottom-10 left-10 right-10">
-               <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border-l-[6px] border-[#de1c21]">
-                  <div className="text-[#0e5872] font-black text-xl mb-1">{ABOUT_DOCTOR.name}</div>
-                  <div className="text-[#de1c21] text-sm font-bold uppercase tracking-widest">{ABOUT_DOCTOR.degree}</div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0e5872]/60 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4 md:bottom-10 md:left-10 md:right-10">
+               <div className="bg-white/95 backdrop-blur-md rounded-2xl p-4 md:p-6 shadow-xl border-l-[4px] md:border-l-[6px] border-[#de1c21]">
+                  <div className="text-[#0e5872] font-black text-lg md:text-xl mb-1 leading-tight">{ABOUT_DOCTOR.name}</div>
+                  <div className="text-[#de1c21] text-[10px] md:text-sm font-bold uppercase tracking-widest leading-tight">{ABOUT_DOCTOR.degree}</div>
                </div>
             </div>
           </div>

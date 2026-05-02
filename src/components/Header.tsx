@@ -95,14 +95,14 @@ export const Header: React.FC = () => {
               <img 
                 src={PLACEHOLDERS.LOGO_URL} 
                 alt={`${PLACEHOLDERS.CLINIC_NAME} Logo`} 
-                className="h-14 md:h-20 w-auto object-contain transition-all"
+                className="h-10 md:h-20 w-auto object-contain transition-all"
                 onError={(e) => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=Logo';
                 }}
               />
               <div className="block">
-                <div className="font-bold text-[#0e5872] text-base md:text-lg leading-tight">{PLACEHOLDERS.CLINIC_NAME}</div>
-                <div className="text-[#de1c21] text-[8px] md:text-[10px] uppercase tracking-wider font-bold leading-tight">Gastroenterology & GI Surgery</div>
+                <div className="font-bold text-[#0e5872] text-[13px] md:text-lg leading-tight">{PLACEHOLDERS.CLINIC_NAME}</div>
+                <div className="text-[#de1c21] text-[6px] md:text-[10px] uppercase tracking-wider font-bold leading-tight">Gastroenterology & GI Surgery</div>
               </div>
             </Link>
 
