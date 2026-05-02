@@ -228,7 +228,7 @@ export const Appointment: React.FC = () => {
                       />
                       <span className="text-gray-600 text-sm leading-relaxed">
                         I consent to the collection and use of my personal information for the purpose of scheduling and managing my medical appointment. I understand this information will be kept confidential.{" "}
-                        <a href="/privacy" className="text-[#de1c21] hover:underline">Privacy Policy</a>
+                        <Link to="/privacy" className="text-[#de1c21] hover:underline">Privacy Policy</Link>
                       </span>
                     </label>
                     {errors.consent && (

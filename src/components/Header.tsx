@@ -156,12 +156,12 @@ export const Header: React.FC = () => {
 
             {/* Right actions */}
             <div className="flex items-center gap-2">
-              <a
-                href="/appointment"
+              <Link
+                to="/appointment"
                 className="hidden md:inline-flex items-center gap-2 bg-gradient-to-r from-[#0e5872] to-[#1a7191] text-white text-sm font-semibold px-5 py-2.5 rounded-full hover:shadow-lg hover:scale-105 transition-all duration-200"
               >
                 Make An Appointment
-              </a>
+              </Link>
               {/* Hamburger */}
               <button
                 className="lg:hidden p-2 rounded-md text-[#0e5872] hover:bg-gray-100 transition-colors"
@@ -223,12 +223,12 @@ export const Header: React.FC = () => {
                 </div>
               ))}
               <div className="p-5">
-                <a
-                  href="/appointment"
+                <Link
+                  to="/appointment"
                   className="block text-center bg-gradient-to-r from-[#de1c21] to-[#ff7680] text-white font-semibold py-3 rounded-full"
                 >
                   Make An Appointment
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation, Link } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
@@ -25,12 +25,12 @@ const NotFound: React.FC = () => (
       <div className="text-9xl font-extrabold text-[#0e5872]/10 mb-4">404</div>
       <h1 className="text-3xl font-bold text-[#0e5872] mb-3">Page Not Found</h1>
       <p className="text-gray-500 mb-8">The page you're looking for doesn't exist or has been moved.</p>
-      <a
-        href="/Aravind_mano/"
+      <Link
+        to="/"
         className="inline-flex items-center gap-2 bg-[#0e5872] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#de1c21] transition-colors"
       >
         Back to Home
-      </a>
+      </Link>
     </div>
   </main>
 );
