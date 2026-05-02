@@ -3,7 +3,7 @@
 // Replace all {{PLACEHOLDER}} values with your actual content
 // ============================================================
 
-const resolveAssetPath = (path: string) => {
+export const resolveAssetPath = (path: string) => {
   if (path.startsWith('http')) return path;
   const base = import.meta.env.BASE_URL || "/";
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;

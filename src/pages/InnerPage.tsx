@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { PageHero } from "../components/PageHero";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { CTASection } from "../components/CTASection";
-import { INNER_PAGES, PLACEHOLDERS } from "../data/siteData";
+import { INNER_PAGES, PLACEHOLDERS, resolveAssetPath } from "../data/siteData";
 import { Activity, AlertCircle, ArrowRight, CheckCircle2, ChevronRight, FileText, Phone, Calendar } from "lucide-react";
 
 export const InnerPage: React.FC = () => {
