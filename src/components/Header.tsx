@@ -100,9 +100,9 @@ export const Header: React.FC = () => {
                   (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=Logo';
                 }}
               />
-              <div className="hidden sm:block">
-                <div className="font-bold text-[#0e5872] text-lg leading-tight">{PLACEHOLDERS.CLINIC_NAME}</div>
-                <div className="text-[#de1c21] text-[10px] uppercase tracking-wider font-bold leading-tight">Gastroenterology & GI Surgery</div>
+              <div className="block">
+                <div className="font-bold text-[#0e5872] text-base md:text-lg leading-tight">{PLACEHOLDERS.CLINIC_NAME}</div>
+                <div className="text-[#de1c21] text-[8px] md:text-[10px] uppercase tracking-wider font-bold leading-tight">Gastroenterology & GI Surgery</div>
               </div>
             </Link>
 
