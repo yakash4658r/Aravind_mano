@@ -40,15 +40,14 @@ export const InnerPage: React.FC = () => {
     } else if (key.includes("laparoscopic") || key.includes("hernia")) {
       mainImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
     }
-  }
-  
+  const bannerImage = resolveAssetPath("/images/medical_banner_bg.png");
   const secondaryImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
 
   return (
     <main className="bg-white min-h-screen relative font-sans">
       <PageHero 
         title={data.title || "Medical Service"} 
-        image={mainImage}
+        image={bannerImage}
       />
 
       {/* Section 1: Introduction (Editorial Style) */}

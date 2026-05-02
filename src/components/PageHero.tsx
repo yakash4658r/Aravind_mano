@@ -22,10 +22,11 @@ export const PageHero: React.FC<PageHeroProps> = ({
       {/* Background Image Overlay */}
       {image && (
         <div 
-          className="absolute inset-0 z-0 bg-cover bg-center opacity-20 mix-blend-overlay grayscale"
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-30 mix-blend-overlay"
           style={{ backgroundImage: `url(${image})` }}
         />
       )}
+      <div className="absolute inset-0 z-0 bg-black/10" />
       {/* Immersive Background Depth */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#de1c21]/10 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2" />
