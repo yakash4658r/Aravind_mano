@@ -619,20 +619,23 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
     title: "Stomach Cancer",
     breadcrumb: "Conditions > Stomach Cancer",
     intro:
-      "Stomach cancer, also known as gastric cancer, starts in the cells lining the stomach. Early surgical intervention combined with D2 lymphadenectomy is the curative standard.",
+      "Stomach (gastric) cancer requires early detection and expert surgical management for the best chance of cure. Dr. Aravind Manoharan performs both subtotal and total gastrectomy with D2 lymph node dissection — the internationally accepted standard for curative gastric cancer surgery — combined with post-operative chemotherapy coordination for Stage II/III disease.",
     highlights: [
-      "MCh specialized D2 Lymphadenectomy",
-      "Subtotal and Total Gastrectomy",
-      "Curative intent even for locally advanced cases",
-      "Minimally invasive options for early gastric cancer",
-      "Multidisciplinary tumor board staging",
+      "Subtotal gastrectomy for distal stomach tumours",
+      "Total gastrectomy for tumours of the mid or upper stomach",
+      "D2 lymphadenectomy for complete lymph node staging and clearance",
+      "Perioperative chemotherapy (FLOT or FOLFOX regimen) for Stage II/III disease",
+      "Laparoscopic gastrectomy for selected early-stage cases",
+      "MCh Super-Specialty Qualification",
+      "Multidisciplinary Care Coordination",
     ],
     symptoms: [
-      "Persistent nausea and stomach pain",
-      "Feeling bloated after eating small amounts",
-      "Severe, persistent indigestion",
-      "Unexplained weight loss",
-      "Vomiting blood or having black stools",
+      "Persistent upper abdominal discomfort or pain",
+      "Unexplained weight loss and loss of appetite",
+      "Nausea and vomiting",
+      "Feeling full quickly after small meals",
+      "Black or tarry stools (suggesting stomach bleeding)",
+      "Anaemia detected on blood tests",
     ],
     treatmentSteps: [
       { step: "Diagnostic Endoscopy", desc: "Visual inspection and multiple biopsies." },
@@ -640,7 +643,10 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
       { step: "Surgery", desc: "Total or subtotal removal of the stomach with nodal clearance." },
       { step: "Reconstruction", desc: "Joining the esophagus or remaining stomach to the intestine." },
     ],
-    faq: [FAQ_ITEMS[3]],
+    faq: [
+      { q: "Can you live normally after stomach cancer surgery?", a: "Yes — with dietary adjustments and nutritional support, most patients live well after gastrectomy. Small, frequent meals and vitamin supplementation are key to recovery." },
+      { q: "What is H. pylori and does it cause stomach cancer?", a: "Helicobacter pylori is a bacterial infection that significantly increases the risk of stomach cancer. Eradication of H. pylori is an important preventive measure." },
+    ],
   },
   "conditions/colorectal-cancer": {
     title: "Colorectal Cancer",
@@ -800,10 +806,138 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
 };
 
 // ─── Alias mappings for new Navigation Structure ───
-INNER_PAGES["conditions/liver-cancer"] = { ...INNER_PAGES["conditions/liver-tumours"], title: "Liver Cancer", breadcrumb: "Conditions > Liver Cancer" };
-INNER_PAGES["conditions/pancreatic-cancer"] = { ...INNER_PAGES["conditions/pancreatic-disease"], title: "Pancreatic Cancer", breadcrumb: "Conditions > Pancreatic Cancer" };
-INNER_PAGES["conditions/oesophageal-cancer"] = { ...INNER_PAGES["conditions/esophageal-cancer"], title: "Oesophageal Cancer", breadcrumb: "Conditions > Oesophageal Cancer" };
-INNER_PAGES["conditions/intestinal-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Intestinal Cancer", breadcrumb: "Conditions > Intestinal Cancer" };
+INNER_PAGES["conditions/liver-cancer"] = {
+  title: "Liver Cancer",
+  breadcrumb: "Conditions > Liver Cancer",
+  intro:
+    "Liver cancer can be primary (originating in the liver — most commonly hepatocellular carcinoma or HCC) or secondary (metastases that have spread to the liver from cancers elsewhere). When liver cancer is diagnosed at a resectable stage, surgery offers the best chance of cure. Dr. Aravind coordinates with specialists for ablation, targeted therapy, and systemic treatments.",
+  highlights: [
+    "Surgical Resection (Hepatectomy) - Primary curative treatment",
+    "Laparoscopic Liver Resection for suitable cases",
+    "Lymph Node Dissection for accurate staging",
+    "Multidisciplinary Management (TACE, ablation, targeted therapy)",
+    "GI Oncosurgery Super-specialty Expertise",
+    "Tumour Board Coordination with oncology teams",
+  ],
+  symptoms: [
+    "Unexplained weight loss and loss of appetite",
+    "Upper abdominal pain or swelling (especially on the right side)",
+    "Jaundice (yellowing of skin or eyes) and dark urine",
+    "History of liver cirrhosis, chronic hepatitis B or C",
+    "Abnormal liver function tests or elevated AFP",
+    "Incidental liver mass found on imaging",
+  ],
+  treatmentSteps: [
+    { step: "Oncological Staging", desc: "Triple-phase CT and functional liver assessment." },
+    { step: "Surgical Resection", desc: "Removal of the liver segment or lobe containing the tumour." },
+    { step: "Multidisciplinary Care", desc: "Coordination for ablation or targeted therapy if surgery is not suitable." },
+    { step: "Long-term Surveillance", desc: "Regular scans and tumor markers to monitor for recurrence." },
+  ],
+  faq: [
+    { q: "Can liver cancer be cured?", a: "When detected early and surgically resected completely, liver cancer can be cured. Early-stage HCC and isolated colorectal liver metastases have good surgical outcomes." },
+    { q: "What causes liver cancer?", a: "Common risk factors include chronic hepatitis B or C infection, liver cirrhosis, heavy alcohol use, and non-alcoholic fatty liver disease (NAFLD)." },
+    { q: "Is liver cancer surgery safe?", a: "In experienced hands and with careful patient selection, liver cancer surgery is safe. Dr. Aravind Manoharan performs thorough pre-operative evaluation." },
+    { q: "What happens if liver cancer cannot be removed surgically?", a: "Options include ablation (RFA/MWA), TACE, targeted therapy, or immunotherapy — coordinated by Dr. Aravind with the oncology team." },
+  ],
+};
+
+INNER_PAGES["conditions/pancreatic-cancer"] = {
+  title: "Pancreatic Cancer",
+  breadcrumb: "Conditions > Pancreatic Cancer",
+  intro:
+    "Pancreatic cancer is one of the most challenging gastrointestinal cancers, often presenting late. Dr. Aravind Manoharan offers expert surgical management — including the Whipple procedure and distal pancreatectomy — combined with close oncology coordination for chemotherapy before and after surgery.",
+  highlights: [
+    "Whipple procedure (pancreaticoduodenectomy) for head tumours",
+    "Distal pancreatectomy for body and tail tumours",
+    "Neoadjuvant chemotherapy (FOLFIRINOX, Gemcitabine)",
+    "Adjuvant chemotherapy after surgery for survival",
+    "Palliative bypass surgery for symptom control",
+    "MCh Super-Specialty Qualification",
+    "Minimally invasive approach prioritised",
+  ],
+  symptoms: [
+    "Upper abdominal pain radiating to the back",
+    "Unexplained weight loss and loss of appetite",
+    "New-onset diabetes in older adults",
+    "Jaundice (yellowing of skin/eyes) and pale stools",
+    "Nausea, vomiting, and early satiety",
+  ],
+  treatmentSteps: [
+    { step: "Vascular Assessment", desc: "High-resolution imaging to determine tumor relationship with major vessels." },
+    { step: "Whipple/Resection", desc: "Major surgical removal of the affected pancreatic segment." },
+    { step: "Oncology Coordination", desc: "Sequencing of chemotherapy to improve surgical outcomes." },
+    { step: "Nutritional Management", desc: "Post-op enzyme therapy and specialized dietary support." },
+  ],
+  faq: [
+    { q: "Is pancreatic cancer always fatal?", a: "Not always — when detected and surgically resected at an early stage, outcomes are significantly better. Surgery combined with chemotherapy offers the best chance." },
+    { q: "What are the warning signs of pancreatic cancer?", a: "Painless jaundice, unexplained weight loss, new-onset diabetes, and persistent upper abdominal/back pain are key warning signs." },
+  ],
+};
+
+INNER_PAGES["conditions/oesophageal-cancer"] = {
+  title: "Oesophageal Cancer",
+  breadcrumb: "Conditions > Oesophageal Cancer",
+  intro:
+    "Oesophageal cancer (cancer of the food pipe) is a serious GI malignancy requiring prompt diagnosis. Dr. Aravind Manoharan offers comprehensive treatment — including oesophagectomy and neoadjuvant chemoradiation — with a focus on restoring swallowing function and quality of life.",
+  highlights: [
+    "Neoadjuvant chemoradiation before surgery to downstage tumour",
+    "Oesophagectomy with gastric pull-up or colonic interposition",
+    "Minimally invasive oesophagectomy (where feasible)",
+    "Palliative stenting or bypass for advanced disease",
+    "Nutritional support and feeding tube management",
+    "Super-Specialty trained in surgical gastroenterology",
+  ],
+  symptoms: [
+    "Progressive difficulty swallowing (dysphagia)",
+    "Unexplained weight loss",
+    "Chest pain or discomfort",
+    "Regurgitation of food or liquid",
+    "Chronic cough, hoarseness, or hiccups",
+  ],
+  treatmentSteps: [
+    { step: "Swallowing Evaluation", desc: "Endoscopy and barium swallow to locate the lesion." },
+    { step: "Neoadjuvant Therapy", desc: "Shrinking the tumor with chemo/radiation before surgery." },
+    { step: "Oesophagectomy", desc: "Surgical removal and food pipe reconstruction." },
+    { step: "Nutritional Recovery", desc: "Gradual return to swallowing with expert dietary guidance." },
+  ],
+  faq: [
+    { q: "Is oesophageal cancer treatable?", a: "Oesophageal cancer detected at an early or locally advanced stage is treatable with combined surgery and chemoradiation." },
+    { q: "What causes oesophageal cancer?", a: "Risk factors include chronic GERD, Barrett's oesophagus, smoking, heavy alcohol use, and achalasia." },
+  ],
+};
+
+INNER_PAGES["conditions/intestinal-cancer"] = {
+  title: "Intestinal Cancer",
+  breadcrumb: "Conditions > Intestinal Cancer",
+  intro:
+    "Intestinal cancers — including tumours of the small bowel and large intestine — require prompt diagnosis and specialist surgical management. Dr. Aravind Manoharan offers bowel resection with adequate margins and lymph node clearance, combined with adjuvant treatment when indicated.",
+  highlights: [
+    "Small bowel resection with primary anastomosis",
+    "Right or left hemicolectomy for large bowel tumours",
+    "Laparoscopic bowel resection where suitable",
+    "Lymph node dissection for oncological staging",
+    "Adjuvant chemotherapy coordination for advanced disease",
+    "MCh Super-Specialty Qualification",
+  ],
+  symptoms: [
+    "Abdominal pain or cramping",
+    "Unexplained weight loss",
+    "Blood in stool or dark stools",
+    "Nausea, vomiting, or bowel obstruction",
+    "Fatigue and anaemia from chronic bleeding",
+  ],
+  treatmentSteps: [
+    { step: "Bowel Visualization", desc: "Colonoscopy or CT Enteroclysis to identify the lesion." },
+    { step: "Surgical Resection", desc: "Removal of the affected segment with wide margins." },
+    { step: "Reconstruction", desc: "Rejoining the healthy bowel ends safely." },
+    { step: "Oncology Review", desc: "Post-op assessment for the need for chemotherapy." },
+  ],
+  faq: [
+    { q: "Is intestinal cancer common?", a: "Small intestinal cancer is relatively rare. Large intestinal (colorectal) cancer is one of the most common GI cancers worldwide." },
+    { q: "Can intestinal cancer be treated without surgery?", a: "Surgery is the primary treatment for resectable intestinal cancers. Chemotherapy and radiation may be used as adjuncts." },
+  ],
+};
+
 INNER_PAGES["conditions/colon-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Colon Cancer", breadcrumb: "Conditions > Colon Cancer" };
 
 INNER_PAGES["services/robotic-surgery"] = {
