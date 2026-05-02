@@ -23,184 +23,183 @@ export const InnerPage: React.FC = () => {
   const hasHighlights = data.highlights && Array.isArray(data.highlights) && data.highlights.length > 0;
   const hasFaq = data.faq && Array.isArray(data.faq) && data.faq.length > 0;
 
+  // Dynamically select images based on the page key or use defaults
+  const mainImage = key.includes("liver") 
+    ? "C:/Users/Yakash/.gemini/antigravity/brain/be266fec-34f4-4c4a-97ee-16cdab13fe4a/liver_surgery_illustration_1777712227913.png" 
+    : PLACEHOLDERS.DOCTOR_IMAGE;
+  
+  const secondaryImage = "C:/Users/Yakash/.gemini/antigravity/brain/be266fec-34f4-4c4a-97ee-16cdab13fe4a/laparoscopic_surgery_setup_1777712249279.png";
+
   return (
-    <main className="bg-[#f8fafc] min-h-screen relative font-sans">
+    <main className="bg-white min-h-screen relative font-sans">
       <PageHero 
         title={data.title || "Medical Service"} 
         breadcrumb={data.breadcrumb || "Services"} 
       />
 
-      <section className="py-12 relative z-10">
+      {/* Section 1: Introduction (Editorial Style) */}
+      <section className="py-20 md:py-28 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-            
-            {/* Main Content Area */}
-            <div className="lg:col-span-8">
-              
-              {/* Intro Overview Card - Editorial Style */}
-              <div className="bg-white rounded-xl p-8 md:p-12 border border-[#0e5872]/10 shadow-sm mb-16 relative overflow-hidden">
-                <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#0e5872]" />
-                <div className="flex items-center gap-2 mb-6">
-                  <FileText className="w-5 h-5 text-[#de1c21]" />
-                  <span className="text-[#de1c21] text-xs font-bold uppercase tracking-widest">Clinical Overview</span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1f2b43] mb-6 leading-tight tracking-tight">
-                  Understanding {data.title}
-                </h2>
-                <p className="text-gray-600 leading-relaxed text-lg font-medium">
-                  {data.intro}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1">
+              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0e5872]/5 rounded-full border border-[#0e5872]/10">
+                <FileText className="w-4 h-4 text-[#de1c21]" />
+                <span className="text-[#de1c21] text-[10px] font-black uppercase tracking-[0.2em]">Clinical Information</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-black text-[#0e5872] mb-8 leading-tight tracking-tighter">
+                Advanced, Minimally Invasive Care for Faster Recovery
+              </h2>
+              <div className="space-y-6 text-gray-500 text-lg leading-relaxed font-medium">
+                <p>{data.intro}</p>
+                <p>
+                  As a super-specialist in Surgical Gastroenterology and GI Oncosurgery, Dr. Aravind Manoharan combines precision techniques with comprehensive patient care to achieve superior outcomes and rapid recovery for his patients.
                 </p>
               </div>
-
-              {/* Highlights Section - Minimal Grid */}
-              {hasHighlights && (
-                <div className="mb-16">
-                  <h3 className="font-bold text-[#1f2b43] text-2xl mb-8 flex items-center gap-3">
-                    <Activity className="w-6 h-6 text-[#0e5872]" /> Focus Areas & Advantages
-                  </h3>
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    {data.highlights.map((h: string, i: number) => (
-                      <div key={i} className="group bg-white rounded-lg p-5 border border-gray-200 hover:border-[#0e5872]/40 hover:shadow-md transition-all duration-300 flex items-start gap-4">
-                        <CheckCircle2 className="w-5 h-5 text-[#0e5872] shrink-0 mt-0.5 group-hover:scale-110 transition-transform" />
-                        <span className="text-gray-700 text-sm md:text-base leading-snug">{h}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Early Indicators - Clinical Alert Box */}
-              {hasSymptoms && (
-                <div className="mb-16">
-                  <div className="bg-white border border-[#de1c21]/20 rounded-xl overflow-hidden shadow-sm relative">
-                    <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#de1c21] to-[#ff7680]" />
-                    <div className="p-8 md:p-10">
-                      <div className="flex items-center gap-3 mb-6">
-                        <AlertCircle className="w-6 h-6 text-[#de1c21]" />
-                        <h3 className="font-bold text-2xl text-[#1f2b43] tracking-tight">Early Indicators</h3>
-                      </div>
-                      <p className="text-gray-500 mb-8 italic text-sm md:text-base">
-                        Proactive evaluation is the cornerstone of effective surgical outcomes. Please monitor for:
-                      </p>
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        {data.symptoms.map((s: string, i: number) => (
-                          <div key={i} className="flex items-center gap-3 bg-red-50/50 rounded-lg p-3 border border-red-100/50 text-gray-700 text-sm font-medium">
-                            <div className="w-1.5 h-1.5 rounded-full bg-[#de1c21] shrink-0" />
-                            {s}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Treatment Protocol Timeline - Highly Innovative */}
-              {hasTreatment && (
-                <div className="mb-16">
-                  <h3 className="font-bold text-[#1f2b43] text-2xl mb-10">Clinical Pathway</h3>
-                  <div className="relative border-l-2 border-[#0e5872]/10 ml-6 md:ml-8 space-y-12">
-                    {data.treatmentSteps.map((step: any, i: number) => (
-                      <div key={i} className="relative pl-8 md:pl-12 group">
-                        {/* Timeline Node */}
-                        <div className="absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-white border-4 border-[#0e5872]/20 group-hover:border-[#0e5872] flex items-center justify-center transition-all duration-300">
-                          <div className="w-2 h-2 rounded-full bg-[#0e5872] opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </div>
-                        
-                        <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-sm group-hover:border-[#0e5872]/30 group-hover:shadow-md transition-all duration-300">
-                          <span className="text-[#de1c21] text-xs font-bold tracking-widest uppercase mb-2 block">Step 0{i + 1}</span>
-                          <h4 className="font-bold text-[#1f2b43] text-lg md:text-xl mb-3">{step.step}</h4>
-                          <p className="text-gray-600 text-sm md:text-base leading-relaxed">{step.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
-
-            {/* Sidebar Columns */}
-            <div className="lg:col-span-4">
-              <div className="sticky top-24 space-y-6">
-                
-                {/* Premium Contact Card */}
-                <div className="bg-[#1f2b43] rounded-xl p-8 shadow-lg text-white border border-[#1f2b43]">
-                  <h3 className="font-bold text-2xl mb-3">Expert Consultation</h3>
-                  <p className="text-white/70 text-sm mb-8 leading-relaxed">
-                    Connect directly for a personalized surgical evaluation at M R Hospital or schedule an online consultation.
-                  </p>
-                  
-                  <div className="space-y-3">
-                    <a
-                      href={PLACEHOLDERS.APPOINTMENT_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full bg-white text-[#1f2b43] font-bold py-3.5 rounded hover:bg-gray-100 transition-colors"
-                    >
-                      <Calendar className="w-4 h-4" /> Book Appointment
-                    </a>
-                    <a
-                      href={`https://wa.me/${PLACEHOLDERS.WHATSAPP}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center justify-center gap-2 w-full border border-white/20 text-white font-semibold py-3.5 rounded hover:bg-white/10 transition-colors"
-                    >
-                      Message on WhatsApp
-                    </a>
-                  </div>
-
-                  <div className="mt-8 pt-6 border-t border-white/10">
-                    <span className="block text-xs font-bold text-white/50 uppercase tracking-widest mb-1">Emergency 24/7</span>
-                    <a href={`tel:${PLACEHOLDERS.PHONE}`} className="flex items-center gap-2 text-xl font-bold hover:text-[#ff7680] transition-colors">
-                      <Phone className="w-5 h-5" /> {PLACEHOLDERS.PHONE}
-                    </a>
-                  </div>
+            <div className="order-1 lg:order-2">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-[#0e5872]/10 rounded-[3rem] translate-x-6 translate-y-6 -z-10 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-500" />
+                <div className="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white aspect-[4/3]">
+                  <img 
+                    src={mainImage} 
+                    alt={data.title} 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
-
-                {/* Related Portals - Clean List */}
-                <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-                  <h4 className="font-bold text-[#1f2b43] mb-4">Related Expertise</h4>
-                  <ul className="space-y-2">
-                    {[
-                      { label: "Laparoscopic Surgery", href: "/services/laparoscopic-surgery" },
-                      { label: "GI Cancer Surgery", href: "/services/gi-cancer-surgery" },
-                      { label: "Clinic Location", href: "/clinic" },
-                      { label: "Patient Resources", href: "/resources/faq" },
-                    ].map((l) => (
-                      <li key={l.href}>
-                        <Link
-                          to={l.href}
-                          className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 text-gray-600 hover:text-[#0e5872] transition-colors text-sm font-medium group"
-                        >
-                          {l.label}
-                          <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#0e5872] transition-colors" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
               </div>
             </div>
-
           </div>
         </div>
       </section>
 
+      {/* Section 2: Clinical Overview / Highlights */}
+      <section className="py-20 bg-gray-50/50 border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="max-w-4xl">
+             <h2 className="text-3xl md:text-4xl font-black text-[#0e5872] mb-8 tracking-tight">What Is {data.title}?</h2>
+             <p className="text-gray-500 text-xl leading-relaxed font-medium">
+               {data.title} requires a specialized approach combining early detection, accurate staging, and expert surgical intervention. Our clinic prioritizes minimally invasive techniques to ensure the highest quality of life during and after treatment.
+             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3: Advantages & Highlights (Two Column List Style) */}
+      {hasHighlights && (
+        <section className="py-24 md:py-32">
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="relative">
+                <div className="rounded-[2.5rem] overflow-hidden shadow-2xl group">
+                  <img 
+                    src={secondaryImage} 
+                    alt="Surgical Setup" 
+                    className="w-full h-full object-cover aspect-video group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e5872]/40 to-transparent" />
+                </div>
+                {/* Floating Stat Card */}
+                <div className="absolute -bottom-10 -right-6 bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 max-w-[200px] hidden md:block">
+                  <div className="text-4xl font-black text-[#de1c21] mb-1">MCh</div>
+                  <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest leading-tight">Super-Specialty Qualification</div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex gap-4 mb-8">
+                  <button className="bg-[#0e5872] text-white text-xs font-black uppercase tracking-widest px-6 py-3 rounded-full shadow-lg">Advantages Of Procedure</button>
+                  <button className="bg-white text-[#0e5872] text-xs font-black uppercase tracking-widest px-6 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors">Advantages To Patient</button>
+                </div>
+                
+                <div className="bg-[#f0f9fb] rounded-[2rem] p-8 md:p-10 border border-[#0e5872]/10">
+                  <h3 className="text-[#0e5872] font-black text-xl mb-8 uppercase tracking-widest flex items-center gap-3">
+                    <Activity className="w-5 h-5 text-[#de1c21]" /> Key Focus Areas
+                  </h3>
+                  <div className="space-y-4">
+                    {data.highlights.map((h: string, i: number) => (
+                      <div key={i} className="flex items-center gap-4 group">
+                        <div className="w-8 h-8 rounded-full bg-[#0e5872] flex items-center justify-center text-white shrink-0 group-hover:bg-[#de1c21] transition-colors">
+                          <ArrowRight className="w-4 h-4" />
+                        </div>
+                        <span className="text-[#0e5872] font-bold text-sm md:text-base">{h}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 4: Clinical Indicators / Symptoms */}
+      {hasSymptoms && (
+        <section className="py-24 bg-[#1f2b43] text-white relative overflow-hidden">
+          {/* Background Accents */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#de1c21]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
+          
+          <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-center">
+            <h2 className="text-4xl md:text-5xl font-black mb-12 tracking-tighter leading-tight">
+              When to Seek Care & Clinical Indicators
+            </h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {data.symptoms.map((s: string, i: number) => (
+                <div key={i} className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 text-left hover:bg-white/10 hover:border-white/20 transition-all duration-300 group">
+                  <div className="w-10 h-10 rounded-full bg-[#de1c21] flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <AlertCircle className="w-5 h-5 text-white" />
+                  </div>
+                  <p className="text-lg font-bold leading-snug group-hover:text-white transition-colors">
+                    {s}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Section 5: Treatment Protocol / Pathway */}
+      {hasTreatment && (
+        <section className="py-28 md:py-40">
+          <div className="max-w-7xl mx-auto px-4 md:px-8 text-center mb-20">
+            <h2 className="text-4xl md:text-6xl font-black text-[#0e5872] mb-6 tracking-tighter">Clinical Pathway</h2>
+            <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
+              A comprehensive, step-by-step approach to diagnosis, surgery, and long-term recovery management.
+            </p>
+          </div>
+          <div className="max-w-7xl mx-auto px-4 md:px-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {data.treatmentSteps.map((step: any, i: number) => (
+                <div key={i} className="relative group">
+                  <div className="bg-white rounded-[2.5rem] p-10 h-full border border-gray-100 shadow-xl group-hover:border-[#0e5872]/30 group-hover:shadow-[0_40px_80px_-20px_rgba(14,88,114,0.15)] transition-all duration-500 flex flex-col text-center">
+                    <div className="text-[#de1c21] text-xs font-black tracking-[0.3em] uppercase mb-6">Phase 0{i + 1}</div>
+                    <h4 className="text-[#0e5872] font-black text-xl mb-6 leading-tight">{step.step}</h4>
+                    <p className="text-gray-500 text-sm leading-relaxed font-medium flex-1">
+                      {step.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* FAQ Section */}
       {hasFaq && (
-        <section className="py-12 bg-white border-t border-gray-100">
+        <section className="py-28 bg-[#f8fafc] border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-[#1f2b43] tracking-tight mb-4">FAQ</h2>
-              <div className="h-1 w-16 bg-[#0e5872] mx-auto rounded" />
+            <div className="text-center mb-16">
+              <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter uppercase mb-4 opacity-10">FAQ</h2>
+              <h2 className="text-4xl font-black text-[#0e5872] tracking-tight -mt-16">Frequently Asked Questions</h2>
+              <div className="h-1.5 w-20 bg-[#de1c21] mx-auto mt-8 rounded-full" />
             </div>
             <FAQAccordion items={data.faq} />
           </div>
         </section>
       )}
 
-      {/* Reusing the newly built CTASection without overriding props */}
       <CTASection />
     </main>
   );
