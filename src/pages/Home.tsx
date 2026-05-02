@@ -14,7 +14,7 @@ import {
   PLACEHOLDERS,
   resolveAssetPath,
 } from "../data/siteData";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Linkedin, Youtube, Instagram, Facebook } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
@@ -62,13 +62,18 @@ const AboutSection: React.FC = () => (
             <p>{ABOUT_DOCTOR.bio2}</p>
           </div>
           
-          {/* Social Icons */}
           <div className="flex items-center gap-4 mt-8">
             <a href={PLACEHOLDERS.IG} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
-               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+               <Instagram className="w-5 h-5" />
             </a>
             <a href={PLACEHOLDERS.FB} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
-              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+               <Facebook className="w-5 h-5" />
+            </a>
+            <a href={PLACEHOLDERS.LI} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
+               <Linkedin className="w-5 h-5" />
+            </a>
+            <a href={PLACEHOLDERS.YT} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-[#0e5872]/10 text-[#0e5872] flex items-center justify-center hover:bg-[#de1c21] hover:text-white transition-all shadow-sm">
+               <Youtube className="w-5 h-5" />
             </a>
           </div>
 
