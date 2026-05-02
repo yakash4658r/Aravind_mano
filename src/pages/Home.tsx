@@ -10,7 +10,6 @@ import {
   APPROACH_POINTS,
   EXPERTISE_CARDS,
   CANCERS,
-  SERVICES_BAND,
   FAQ_ITEMS,
   PLACEHOLDERS,
 } from "../data/siteData";
@@ -190,56 +189,6 @@ const CancersSection: React.FC = () => (
 );
 
 
-// ─── Section: Services Ribbon ────────────────────────────────
-const ServicesBand: React.FC = () => (
-  <section className="py-16 bg-[#0e5872] relative overflow-hidden" aria-label="Ribbon services">
-    <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-    <div className="absolute -top-32 -left-32 w-[30rem] h-[30rem] bg-[#de1c21]/15 rounded-full blur-[100px] pointer-events-none" />
-    <div className="absolute -bottom-32 -right-32 w-[30rem] h-[30rem] bg-white/5 rounded-full blur-[100px] pointer-events-none" />
-
-    <div className="max-w-7xl mx-auto px-4 relative z-10">
-      <div className="text-center mb-24">
-        <p className="text-[#de1c21] text-xs font-black uppercase tracking-[0.4em] mb-4">Precision Mastery</p>
-        <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter leading-tight">
-          EXPLORE CANCERS WE TREAT
-        </h2>
-      </div>
-
-      <div className="grid md:grid-cols-4 gap-8">
-        {SERVICES_BAND.map((s, i) => (
-          <Link
-            key={i}
-            to={s.href}
-            className="group relative block h-full"
-          >
-            <div className="h-full bg-white/[0.04] backdrop-blur-3xl border border-white/10 rounded-[3.5rem] p-10 hover:bg-white/[0.1] hover:border-white/40 hover:-translate-y-4 transition-all duration-500 hover:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] flex flex-col">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-2xl group-hover:bg-[#de1c21]/20 transition-colors" />
-              
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="text-6xl mb-10 transform group-hover:scale-110 group-hover:-rotate-6 transition-transform origin-left">
-                  {s.icon}
-                </div>
-                <h3 className="font-black text-white text-2xl mb-4 tracking-tight leading-tight">
-                  {s.title}
-                </h3>
-                <p className="text-white/50 text-lg leading-relaxed mb-10 group-hover:text-white/80 transition-colors font-medium">
-                  {s.desc}
-                </p>
-                
-                <div className="mt-auto inline-flex items-center justify-between pt-8 border-t border-white/5 group-hover:border-white/20 transition-colors">
-                  <div className="text-[10px] font-black text-white/40 group-hover:text-[#de1c21] uppercase tracking-[0.4em] transition-all">
-                    Explore Protocol
-                  </div>
-                  <ArrowRight className="w-5 h-5 text-white/20 group-hover:text-white transition-colors" />
-                </div>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 // ─── Home Page ───────────────────────────────────────────────
 export const Home: React.FC = () => {
@@ -250,7 +199,6 @@ export const Home: React.FC = () => {
       <AboutSection />
       <ExpertiseSection />
       <CancersSection />
-      <ServicesBand />
       <TestimonialSlider />
 
       {/* FAQ section */}
