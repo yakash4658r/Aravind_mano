@@ -4,21 +4,28 @@ import { ChevronRight, Home } from "lucide-react";
 
 interface PageHeroProps {
   title: string;
-  breadcrumb: string;
   subtitle?: string;
   bgColor?: string;
+  image?: string;
 }
 
 export const PageHero: React.FC<PageHeroProps> = ({
   title,
-  breadcrumb,
   subtitle,
   bgColor = "from-[#0e5872] via-[#0e5872] to-[#0a4256]",
+  image,
 }) => {
-  const crumbs = breadcrumb.split(">").map((c) => c.trim());
+
 
   return (
     <section className={`relative overflow-hidden bg-gradient-to-br ${bgColor} py-24 md:py-32`} aria-label="Page hero">
+      {/* Background Image Overlay */}
+      {image && (
+        <div 
+          className="absolute inset-0 z-0 bg-cover bg-center opacity-20 mix-blend-overlay grayscale"
+          style={{ backgroundImage: `url(${image})` }}
+        />
+      )}
       {/* Immersive Background Depth */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-[#de1c21]/10 rounded-full blur-[140px] -translate-y-1/2 translate-x-1/2" />

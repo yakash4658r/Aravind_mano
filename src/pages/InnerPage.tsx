@@ -48,7 +48,7 @@ export const InnerPage: React.FC = () => {
     <main className="bg-white min-h-screen relative font-sans">
       <PageHero 
         title={data.title || "Medical Service"} 
-        breadcrumb={data.breadcrumb || "Services"} 
+        image={mainImage}
       />
 
       {/* Section 1: Introduction (Editorial Style) */}
