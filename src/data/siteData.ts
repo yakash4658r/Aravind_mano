@@ -366,6 +366,7 @@ export type InnerPageData = {
   symptoms: string[];
   treatmentSteps: { step: string; desc: string }[];
   faq: { q: string; a: string }[];
+  image?: string;
 };
 
 export const INNER_PAGES: Record<string, InnerPageData> = {
@@ -406,6 +407,7 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
       { q: "Is laparoscopic surgery safe?", a: "Yes — laparoscopic surgery is well-established, safe, and performed routinely worldwide. Dr. Aravind Manoharan has extensive experience in laparoscopic techniques for GI conditions." },
       { q: "Does laparoscopic surgery cost more than open surgery?", a: "While the upfront procedural cost may be similar or slightly higher, laparoscopic surgery often results in lower total costs due to shorter hospital stays and faster recovery." },
     ],
+    image: resolveAssetPath("/images/laparoscopic_surgery_setup.png"),
   },
   "services/gi-cancer-surgery": {
     title: "GI Cancer Surgery",
@@ -442,6 +444,7 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
       { q: "Can GI cancer be cured by surgery?", a: "When detected and operated upon at an early stage, many GI cancers can be cured by surgery. Even in advanced cases, surgery combined with other treatments can significantly improve survival and quality of life." },
       { q: "Will I need chemotherapy after GI cancer surgery?", a: "Depending on the cancer type, stage, and pathology findings, adjuvant (post-operative) chemotherapy may be recommended. Dr. Aravind will coordinate with your oncologist for a complete care plan." },
     ],
+    image: resolveAssetPath("/images/gi_tract_illustration.png"),
   },
   "services/hepatobiliary-pancreatic-surgery": {
     title: "Hepatobiliary & Pancreatic Surgery",
@@ -842,6 +845,7 @@ INNER_PAGES["conditions/liver-cancer"] = {
     { q: "Is liver cancer surgery safe?", a: "In experienced hands and with careful patient selection, liver cancer surgery is safe. Dr. Aravind Manoharan performs thorough pre-operative evaluation." },
     { q: "What happens if liver cancer cannot be removed surgically?", a: "Options include ablation (RFA/MWA), TACE, targeted therapy, or immunotherapy — coordinated by Dr. Aravind with the oncology team." },
   ],
+  image: resolveAssetPath("/images/liver_surgery_illustration.png"),
 };
 
 INNER_PAGES["conditions/pancreatic-cancer"] = {
@@ -875,6 +879,7 @@ INNER_PAGES["conditions/pancreatic-cancer"] = {
     { q: "Is pancreatic cancer always fatal?", a: "Not always — when detected and surgically resected at an early stage, outcomes are significantly better. Surgery combined with chemotherapy offers the best chance." },
     { q: "What are the warning signs of pancreatic cancer?", a: "Painless jaundice, unexplained weight loss, new-onset diabetes, and persistent upper abdominal/back pain are key warning signs." },
   ],
+  image: resolveAssetPath("/images/pancreas_illustration.png"),
 };
 
 INNER_PAGES["conditions/oesophageal-cancer"] = {
@@ -907,6 +912,7 @@ INNER_PAGES["conditions/oesophageal-cancer"] = {
     { q: "Is oesophageal cancer treatable?", a: "Oesophageal cancer detected at an early or locally advanced stage is treatable with combined surgery and chemoradiation." },
     { q: "What causes oesophageal cancer?", a: "Risk factors include chronic GERD, Barrett's oesophagus, smoking, heavy alcohol use, and achalasia." },
   ],
+  image: resolveAssetPath("/images/stomach_illustration.png"),
 };
 
 INNER_PAGES["conditions/intestinal-cancer"] = {
@@ -939,6 +945,7 @@ INNER_PAGES["conditions/intestinal-cancer"] = {
     { q: "Is intestinal cancer common?", a: "Small intestinal cancer is relatively rare. Large intestinal (colorectal) cancer is one of the most common GI cancers worldwide." },
     { q: "Can intestinal cancer be treated without surgery?", a: "Surgery is the primary treatment for resectable intestinal cancers. Chemotherapy and radiation may be used as adjuncts." },
   ],
+  image: resolveAssetPath("/images/gi_tract_illustration.png"),
 };
 
 INNER_PAGES["conditions/colon-cancer"] = { ...INNER_PAGES["conditions/colorectal-cancer"], title: "Colon Cancer", breadcrumb: "Conditions > Colon Cancer" };
