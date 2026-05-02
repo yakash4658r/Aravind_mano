@@ -38,14 +38,11 @@ export const InnerPage: React.FC = () => {
       />
 
       {/* Section 1: Introduction (Editorial Style) */}
-      <section className="py-20 md:py-28 overflow-hidden">
+      <section className="py-12 md:py-16 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-[#0e5872]/5 rounded-full border border-[#0e5872]/10">
-                <FileText className="w-4 h-4 text-[#de1c21]" />
-                <span className="text-[#de1c21] text-[10px] font-black uppercase tracking-[0.2em]">Clinical Information</span>
-              </div>
+
               <h2 className="text-4xl md:text-5xl font-black text-[#0e5872] mb-8 leading-tight tracking-tighter">
                 Advanced, Minimally Invasive Care for Faster Recovery
               </h2>
@@ -73,10 +70,10 @@ export const InnerPage: React.FC = () => {
       </section>
 
       {/* Section 2: Clinical Overview / Highlights */}
-      <section className="py-20 bg-gray-50/50 border-y border-gray-100">
+      <section className="py-12 bg-gray-50/50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="max-w-4xl">
-             <h2 className="text-3xl md:text-4xl font-black text-[#0e5872] mb-8 tracking-tight">What Is {data.title}?</h2>
+             <h2 className="text-3xl md:text-4xl font-black text-[#0e5872] mb-8 tracking-tight uppercase">What Is {data.title}?</h2>
              <p className="text-gray-500 text-xl leading-relaxed font-medium">
                {data.title} requires a specialized approach combining early detection, accurate staging, and expert surgical intervention. Our clinic prioritizes minimally invasive techniques to ensure the highest quality of life during and after treatment.
              </p>
@@ -106,10 +103,7 @@ export const InnerPage: React.FC = () => {
               </div>
 
               <div>
-                <div className="flex gap-4 mb-8">
-                  <button className="bg-[#0e5872] text-white text-xs font-black uppercase tracking-widest px-6 py-3 rounded-full shadow-lg">Advantages Of Procedure</button>
-                  <button className="bg-white text-[#0e5872] text-xs font-black uppercase tracking-widest px-6 py-3 rounded-full border border-gray-200 hover:bg-gray-50 transition-colors">Advantages To Patient</button>
-                </div>
+
                 
                 <div className="bg-[#f0f9fb] rounded-[2rem] p-8 md:p-10 border border-[#0e5872]/10">
                   <h3 className="text-[#0e5872] font-black text-xl mb-8 uppercase tracking-widest flex items-center gap-3">
@@ -140,7 +134,7 @@ export const InnerPage: React.FC = () => {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
           
           <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-black mb-12 tracking-tighter leading-tight">
+            <h2 className="text-4xl md:text-5xl font-black mb-12 tracking-tighter leading-tight uppercase">
               When to Seek Care & Clinical Indicators
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -163,7 +157,7 @@ export const InnerPage: React.FC = () => {
       {hasTreatment && (
         <section className="py-28 md:py-40">
           <div className="max-w-7xl mx-auto px-4 md:px-8 text-center mb-20">
-            <h2 className="text-4xl md:text-6xl font-black text-[#0e5872] mb-6 tracking-tighter">Clinical Pathway</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-[#0e5872] mb-6 tracking-tighter uppercase">Clinical Pathway</h2>
             <p className="text-gray-500 text-lg md:text-xl font-medium max-w-2xl mx-auto">
               A comprehensive, step-by-step approach to diagnosis, surgery, and long-term recovery management.
             </p>
@@ -191,9 +185,7 @@ export const InnerPage: React.FC = () => {
         <section className="py-28 bg-[#f8fafc] border-t border-gray-100">
           <div className="max-w-4xl mx-auto px-4 md:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter uppercase mb-4 opacity-10">FAQ</h2>
-              <h2 className="text-4xl font-black text-[#0e5872] tracking-tight -mt-16">Frequently Asked Questions</h2>
-              <div className="h-1.5 w-20 bg-[#de1c21] mx-auto mt-8 rounded-full" />
+              <h2 className="text-5xl md:text-7xl font-black text-[#0e5872] tracking-tighter uppercase">FAQ’S</h2>
             </div>
             <FAQAccordion items={data.faq} />
           </div>
