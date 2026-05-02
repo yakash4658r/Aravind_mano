@@ -12,6 +12,7 @@ import {
   CANCERS,
   FAQ_ITEMS,
   PLACEHOLDERS,
+  resolveAssetPath,
 } from "../data/siteData";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -155,15 +156,15 @@ const CancersSection: React.FC = () => (
       <div className="relative cancer-swiper-container">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
+          spaceBetween={24}
           slidesPerView={1}
           navigation
           pagination={{ clickable: true }}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
           breakpoints={{
-            640: { slidesPerView: 1.5 },
-            768: { slidesPerView: 2 },
+            640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
           }}
           className="pb-16"
         >
@@ -171,30 +172,30 @@ const CancersSection: React.FC = () => (
             <SwiperSlide key={i} className="h-auto">
               <Link
                 to={cancer.href}
-                className="group relative block h-[450px] transition-all duration-300"
+                className="group relative block h-[480px] transition-all duration-300"
                 aria-label={cancer.title}
               >
-                <div className="h-full bg-white/[0.04] backdrop-blur-3xl border border-white/10 rounded-[3.5rem] p-10 hover:bg-white/[0.1] hover:border-white/40 transition-all duration-500 hover:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] flex flex-col">
+                <div className="h-full bg-white/[0.04] backdrop-blur-3xl border border-white/10 rounded-[3.5rem] p-8 md:p-10 hover:bg-white/[0.1] hover:border-white/40 transition-all duration-500 hover:shadow-[0_40px_100px_-30px_rgba(0,0,0,0.5)] flex flex-col text-center md:text-left">
                   <div className="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-full blur-2xl group-hover:bg-white/20 transition-colors" />
                   
                   <div className="relative z-10 flex flex-col h-full">
-                    <div className="text-6xl mb-10 transform origin-left">
+                    <div className="text-6xl mb-8 transform origin-left flex justify-center md:justify-start">
                       {cancer.icon}
                     </div>
                     <h3 className="font-black text-white text-2xl mb-4 tracking-tight leading-tight uppercase">
                       {cancer.title}
                     </h3>
                     
-                    <ul className="text-white/50 text-base leading-relaxed mb-10 group-hover:text-white/80 transition-colors font-medium space-y-2 flex-1">
+                    <ul className="text-white/50 text-base leading-relaxed mb-10 group-hover:text-white/80 transition-colors font-medium space-y-3 flex-1">
                       {cancer.points.map((pt, j) => (
-                        <li key={j} className="flex items-center gap-2">
+                        <li key={j} className="flex items-center gap-2 justify-center md:justify-start">
                           <span className="w-1.5 h-1.5 rounded-full bg-white/40 shrink-0" />
                           {pt}
                         </li>
                       ))}
                     </ul>
                     
-                    <div className="mt-auto inline-flex items-center justify-between pt-8 transition-colors">
+                    <div className="mt-auto inline-flex items-center justify-between pt-8 transition-colors border-t border-white/5">
                       <div className="text-[10px] font-black text-white/40 group-hover:text-white uppercase tracking-[0.4em] transition-all">
                         READ MORE
                       </div>
