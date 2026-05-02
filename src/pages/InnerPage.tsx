@@ -40,6 +40,7 @@ export const InnerPage: React.FC = () => {
     } else if (key.includes("laparoscopic") || key.includes("hernia")) {
       mainImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
     }
+  }
   const bannerImage = resolveAssetPath("/images/medical_banner_bg.png");
   const secondaryImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
 
