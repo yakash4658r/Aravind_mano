@@ -24,11 +24,22 @@ export const InnerPage: React.FC = () => {
   const hasFaq = data.faq && Array.isArray(data.faq) && data.faq.length > 0;
 
   // Dynamically select images based on the page key or use defaults
-  const mainImage = key.includes("liver") 
-    ? "C:/Users/Yakash/.gemini/antigravity/brain/be266fec-34f4-4c4a-97ee-16cdab13fe4a/liver_surgery_illustration_1777712227913.png" 
-    : PLACEHOLDERS.DOCTOR_IMAGE;
+  let mainImage = PLACEHOLDERS.DOCTOR_IMAGE;
+  if (key.includes("liver")) {
+    mainImage = resolveAssetPath("/images/liver_surgery_illustration.png");
+  } else if (key.includes("pancreas") || key.includes("pancreatitis")) {
+    mainImage = resolveAssetPath("/images/pancreas_illustration.png");
+  } else if (key.includes("stomach") || key.includes("oesophageal") || key.includes("bariatric") || key.includes("hiatus") || key.includes("gallstone")) {
+    mainImage = resolveAssetPath("/images/stomach_illustration.png");
+  } else if (key.includes("colon") || key.includes("intestinal") || key.includes("gi-cancer")) {
+    mainImage = resolveAssetPath("/images/gi_tract_illustration.png");
+  } else if (key.includes("robotic")) {
+    mainImage = resolveAssetPath("/images/robotic_surgery_illustration.png");
+  } else if (key.includes("laparoscopic") || key.includes("hernia")) {
+    mainImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
+  }
   
-  const secondaryImage = "C:/Users/Yakash/.gemini/antigravity/brain/be266fec-34f4-4c4a-97ee-16cdab13fe4a/laparoscopic_surgery_setup_1777712249279.png";
+  const secondaryImage = resolveAssetPath("/images/laparoscopic_surgery_setup.png");
 
   return (
     <main className="bg-white min-h-screen relative font-sans">
