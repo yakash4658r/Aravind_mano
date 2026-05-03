@@ -39,10 +39,10 @@ export const PLACEHOLDERS = {
   APPOINTMENT_LINK: "https://www.practo.com/chennai/doctor/dr-aravind-manoharan-gastroenterologist", 
 
   // Social
-  FB: "https://facebook.com/draravindmano",
-  IG: "https://instagram.com/draravindmano",
+  FB: "https://www.facebook.com/share/18ZaqjH2Ag/?mibextid=wwXIfr",
+  IG: "https://www.instagram.com/dr.aravind.manoharan?igsh=eHc4bWFkYjY1c3ky&utm_source=qr",
   LI: "https://linkedin.com/in/draravindmanoharan",
-  YT: "https://youtube.com/@draravindmano",
+  YT: "https://youtube.com/@aravindmanoharan-gutsense?si=Ycx_tibgwMGYVS4e",
 };
 
 export const NAV_ITEMS = [
