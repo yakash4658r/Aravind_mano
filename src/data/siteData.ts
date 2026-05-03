@@ -17,7 +17,7 @@ export const PLACEHOLDERS = {
   DOCTOR_SPECIALITY_LINE: "Laparoscopic Gastro Surgeon & GI Cancer Specialist",
 
   // Clinic / Brand
-  CLINIC_NAME: "DrAravindMano",
+  CLINIC_NAME: "Dr Aravind Manoharan",
   CITY: "Chennai",
   LOGO_URL: resolveAssetPath("/images/Logo.svg"),
   DOCTOR_IMAGE: resolveAssetPath("/images/Aravind Manoharan.webp"),
@@ -135,7 +135,7 @@ export const ABOUT_DOCTOR = {
   bio1:
     "Dr. Aravind Manoharan is a Surgical Gastroenterologist, GI Oncosurgeon, and Gastroenterologist with advanced super-specialty training in Surgical Gastroenterology and GI Surgery. He specializes in diagnosing and treating complex disorders of the entire digestive system — from chronic gastrointestinal conditions to advanced gastrointestinal cancers.",
   bio2:
-    "Currently practising at M R Hospital, Aminjikarai, Chennai, Dr. Aravind manages a wide spectrum of gastrointestinal conditions — from routine gallbladder and hernia surgeries to complex GI cancer resections and hepatobiliary procedures — with the same dedication and thoroughness.",
+    "Currently practising in Chennai, Dr. Aravind manages a wide spectrum of gastrointestinal conditions — from routine gallbladder and hernia surgeries to complex GI cancer resections and hepatobiliary procedures — with the same dedication and thoroughness.",
   highlights: [
     "MBBS — Completed in 2010",
     "MS (General Surgery) — Specialized in 2016",
