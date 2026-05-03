@@ -40,7 +40,7 @@ export const Clinic: React.FC = () => {
                 A Specialist Approach to GI Care
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                {PLACEHOLDERS.CLINIC_NAME} was founded on the belief that world-class surgical expertise in gastroenterology should be accessible, transparent, and patient-centered. Our facility at M R Hospital combines senior surgical leadership with state-of-the-art technology.
+                {PLACEHOLDERS.CLINIC_NAME} was founded on the belief that world-class surgical expertise in gastroenterology should be accessible, transparent, and patient-centered. Our facility combines senior surgical leadership with state-of-the-art technology in Chennai.
               </p>
               <p className="text-gray-600 leading-relaxed mb-8">
                 Every aspect of the clinic — from our pre-operative counselling to our enhanced recovery protocols — is designed around ensuring the best possible outcome for your digestive health. We understand that abdominal health affects overall quality of life, and we treat every case with the urgency and precision it deserves.

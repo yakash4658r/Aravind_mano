@@ -32,7 +32,7 @@ export const PLACEHOLDERS = {
   PHONE: "+91 72002 85569",
   WHATSAPP: "917200285569",
   EMAIL: "draravindmanoharan@gmail.com",
-  ADDRESS: "No 20, old 12, Govinda St, Ayyavoo Colony, Aminjikarai, Chennai, Tamil Nadu 600029",
+  ADDRESS: "No 20, old 12, Govinda St, Ayyavoo Colony, Chennai, Tamil Nadu 600029",
   WORKING_HOURS: "Mon-Fri (8am - 6pm), Sat-Sun (10am - 2pm)",
 
   // Appointment
@@ -783,7 +783,7 @@ export const INNER_PAGES: Record<string, InnerPageData> = {
     title: "Clinic Gallery",
     breadcrumb: "Resources > Gallery",
     intro:
-      "Explore our clinic facilities and surgical capabilities at M R Hospital, Aminjikarai, where we provide advanced GI care.",
+      "Explore our clinic facilities and surgical capabilities in Chennai, where we provide advanced GI care.",
     highlights: [
       "Modern consultation suites",
       "Advanced laparoscopic equipment",
@@ -982,7 +982,7 @@ INNER_PAGES["services/robotic-surgery"] = {
     { q: "Is the robot performing the surgery?", a: "No. The robot is a precision tool. Dr. Aravind Manoharan is fully in control at all times — the robotic system simply translates his movements with greater accuracy." },
     { q: "Is robotic surgery safer than laparoscopic surgery?", a: "For certain complex procedures, robotic surgery offers enhanced precision and reduced complications. For routine cases, laparoscopic surgery remains equally safe and effective." },
     { q: "How long is the recovery after robotic surgery?", a: "Recovery is similar to laparoscopic surgery — most patients are discharged within 2–5 days and return to normal activities within 2–4 weeks." },
-    { q: "Is robotic surgery available in Chennai?", a: "Yes — Dr. Aravind Manoharan offers robotic-assisted surgery at M R Hospital, Aminjikarai, Chennai." },
+    { q: "Is robotic surgery available in Chennai?", a: "Yes — Dr. Aravind Manoharan offers robotic-assisted surgery in Chennai." },
   ],
 };
 

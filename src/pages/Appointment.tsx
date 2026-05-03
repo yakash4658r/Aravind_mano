@@ -151,7 +151,7 @@ export const Appointment: React.FC = () => {
               <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-10 border-t-8 border-[#0e5872]">
                 <h2 className="text-2xl font-bold text-[#0e5872] mb-2">Request an Appointment</h2>
                 <p className="text-gray-500 text-sm mb-8">
-                  Fill out the form below and our patient care team will contact you to confirm your preferred slot at M R Hospital.
+                  Fill out the form below and our patient care team will contact you to confirm your preferred slot.
                 </p>
 
                 <form onSubmit={handleSubmit} noValidate className="space-y-6" aria-label="Appointment request form">
