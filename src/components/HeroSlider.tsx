@@ -30,7 +30,7 @@ export const HeroSlider: React.FC = () => {
         pagination={{ clickable: true }}
         autoplay={{ delay: 5500, disableOnInteraction: false }}
         loop
-        className="h-[400px] md:h-[500px] lg:h-[550px]"
+        className="h-[480px] md:h-[520px] lg:h-[580px]"
       >
         {HERO_SLIDES.map((slide, i) => (
           <SwiperSlide key={i}>
