@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { HashRouter, Routes, Route, useLocation, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, Link } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { WhatsAppButton } from "./components/WhatsAppButton";
@@ -83,9 +83,9 @@ const AppRoutes: React.FC = () => (
 );
 
 const App: React.FC = () => (
-  <HashRouter>
+  <BrowserRouter>
     <AppRoutes />
-  </HashRouter>
+  </BrowserRouter>
 );
 
 export default App;
