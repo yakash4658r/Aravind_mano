@@ -130,8 +130,8 @@ export const Footer: React.FC = () => {
           <span>© {new Date().getFullYear()}, {PLACEHOLDERS.CLINIC_NAME}. All Rights Reserved.</span>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-[#0e5872] transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-[#0e5872] transition-colors">Terms of Use</Link>
-            <Link to="/disclaimer" className="hover:text-[#0e5872] transition-colors">Medical Disclaimer</Link>
+            {/* <Link to="/terms" className="hover:text-[#0e5872] transition-colors">Terms of Use</Link>
+            <Link to="/disclaimer" className="hover:text-[#0e5872] transition-colors">Medical Disclaimer</Link> */}
           </div>
         </div>
       </div>

@@ -9,6 +9,7 @@ import { Clinic } from "./pages/Clinic";
 import { Appointment } from "./pages/Appointment";
 import { Contact } from "./pages/Contact";
 import { InnerPage } from "./pages/InnerPage";
+import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 
 // Scroll to top on route change
 const ScrollToTop: React.FC = () => {
@@ -70,7 +71,7 @@ const AppRoutes: React.FC = () => (
 
       {/* Legal */}
       <Route path="/contact" element={<Contact />} />
-      <Route path="/privacy" element={<SimplePage title="Privacy Policy" />} />
+      <Route path="/privacy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<SimplePage title="Terms of Use" />} />
       <Route path="/disclaimer" element={<SimplePage title="Medical Disclaimer" />} />
 
